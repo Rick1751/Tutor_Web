@@ -1,4 +1,4 @@
-# Sitio Web Tutor: Cableado Estructurado 🌐🌐
+# Sitio Web Tutor: Cableado Estructurado
 
 Proyecto para la asignatura de **Fundamentos de Redes y Conectividad (GR1CD)** - Primer Bimestre 2026-A.
 
@@ -24,7 +24,7 @@ Este proyecto consiste en la implementación de un servidor web local utilizando
 3. Crear un nuevo sitio web apuntando al directorio raíz del proyecto.
 4. Mapear la IP del servidor al dominio `mytutor.com` en el archivo `hosts` del sistema anfitrión.
 
-## 👥 Integrantes
+## Integrantes
 * Paola Pacheco
 * Matias Monge
 * Karla Guaña
