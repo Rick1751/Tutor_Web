@@ -3,34 +3,108 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tutor Web - Inicio</title>
+  <title>Tutor Web - Fundamentos de Redes</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
-<body class="bg-light">
+<body>
 
   <!-- Barra de Navegación -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
-    <div class="container-fluid">
-      <a class="navbar-brand fw-bold" href="index.html">Tutor Web</a>
-      <div class="d-flex" id="navbarNav">
-        <ul class="navbar-nav flex-row gap-3">
-          <li class="nav-item"><a class="nav-link active text-white fw-bold" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link text-white-50" href="nosotros.html">Nosotros</a></li>
-          <li class="nav-item"><a class="nav-link text-white-50" href="tecnologia.html">Tecnología</a></li>
-          <li class="nav-item"><a class="nav-link text-white-50" href="topologias.html">Topologías</a></li>
-          <li class="nav-item"><a class="nav-link text-white-50" href="elementos.html">Elementos</a></li>
-        </ul>
-      </div>
+  <nav class="navbar bg-dark shadow-sm">
+    <div class="container navbar-fluid">
+      <a class="navbar-brand" href="index.html">🌐 Tutor Web</a>
+      <ul class="navbar-nav">
+        <li><a class="nav-link active" href="index.html">Inicio</a></li>
+        <li><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+        <li><a class="nav-link" href="tecnologia.html">Tecnología</a></li>
+        <li><a class="nav-link" href="topologias.html">Topologías</a></li>
+        <li><a class="nav-link" href="elementos.html">Elementos</a></li>
+      </ul>
     </div>
   </nav>
 
-  <!-- Contenido Principal -->
-  <div class="container mt-5">
-    <div class="p-5 mb-4 bg-primary text-white rounded-3 shadow text-center">
-      <h1 class="display-4 fw-bold">¡Hola Mundo! 👋</h1>
-      <p class="fs-4">¡Texto debajo de ese coso azul.</p>
+  <!-- Bloque de Bienvenida -->
+  <div class="container mt-4">
+    <div class="p-5 mb-4 bg-primary text-white rounded-3 text-center">
+      <h1 class="display-5">Fundamentos de Redes y Conectividad</h1>
+      <p class="fs-5 text-white-50">Plataforma educativa sobre infraestructura digital y arquitecturas de comunicación.</p>
     </div>
   </div>
+
+  <!-- Contenido en Dos Columnas -->
+  <div class="container my-4">
+    <div class="row">
+      
+      <div class="col-md-6 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h2 class="text-primary fw-bold fs-5 mb-3">1. ¿Qué es una Red de Datos?</h2>
+            <p class="text-muted">
+              Es un conjunto de nodos y dispositivos interconectados que comparten recursos, software e información mediante medios físicos o inalámbricos guiados por protocolos comunes.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h2 class="text-primary fw-bold fs-5 mb-3">2. Importancia de la Conectividad</h2>
+            <p class="text-muted">
+              Permite la centralización de datos, comunicación inmediata global, automatización y el despliegue operativo de servicios modernos en la nube e Internet de las Cosas (IoT).
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Secciones de Acceso Rápido -->
+  <div class="container my-4">
+    <div class="row">
+      <div class="col-12 text-center mb-3">
+        <h3 class="fw-bold text-muted">Módulos de Estudio</h3>
+      </div>
+      
+      <div class="col-md-4 mb-3">
+        <div class="card text-center shadow-sm">
+          <div class="card-body d-flex flex-column">
+            <h4 class="fw-bold fs-5 mb-3">Tecnología de Redes</h4>
+            <p class="text-muted small mb-4">Modelos de referencia de capas OSI y TCP/IP junto a sus protocolos.</p>
+            <a href="tecnologia.html" class="btn btn-outline-primary btn-sm mt-auto">Ver Módulo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <div class="card text-center shadow-sm">
+          <div class="card-body d-flex flex-column">
+            <h4 class="fw-bold fs-5 mb-3">Topologías de Red</h4>
+            <p class="text-muted small mb-4">Distribución geométrica física y lógica de los nodos conectados.</p>
+            <a href="topologias.html" class="btn btn-outline-primary btn-sm mt-auto">Ver Módulo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <div class="card text-center shadow-sm">
+          <div class="card-body d-flex flex-column">
+            <h4 class="fw-bold fs-5 mb-3">Elementos de Hardware</h4>
+            <p class="text-muted small mb-4">Equipos de conmutación, enrutamiento y medios físicos de transmisión.</p>
+            <a href="elementos.html" class="btn btn-outline-primary btn-sm mt-auto">Ver Módulo</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Pie de Página -->
+  <footer class="text-center">
+    <div class="container">
+      <p class="mb-0 fw-bold">© 2026 Proyecto Tutor Web - Fundamentos de Redes</p>
+    </div>
+  </footer>
 
 </body>
 </html>
