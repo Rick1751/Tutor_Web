@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tutor Web - Topologías</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+    .img-placeholder { background-color: #f8f9fa; border: 2px dashed #dee2e6; padding: 20px; text-align: center; color: #adb5bd; border-radius: 12px; margin: 15px 0; }
+    .topo-card { transition: transform 0.3s ease; border-top: 4px solid #0d6efd; }
+    .topo-card:hover { transform: translateY(-5px); }
+  </style>
 </head>
 <body class="bg-light">
 
@@ -25,9 +30,96 @@
 
   <div class="container mt-5">
     <div class="p-5 mb-4 bg-primary text-white rounded-3 shadow text-center">
-      <h1 class="display-4 fw-bold">Topologías de Red </h1>
-      <p class="fs-4">información sobre las topologías en estrella, bus, anillo, malla, entre otras.</p>
+      <h1 class="display-4 fw-bold">Topologías de Red 🏗️</h1>
+      <p class="fs-4">Configuraciones físicas y lógicas de los nodos de comunicación.</p>
     </div>
+
+    <div class="row mb-5">
+      <div class="col-12">
+        <div class="card p-4 shadow-sm text-center">
+          <h2 class="text-primary fw-bold">Física vs Lógica</h2>
+          <p>En el diseño de redes, la <strong>topología física</strong> describe cómo están dispuestos los cables y dispositivos en el espacio real, mientras que la <strong>topología lógica</strong> describe cómo fluyen los datos a través de esos componentes.</p>
+        </div>
+     </div>
+    </div>
+
+    <div class="row g-4">
+      
+      <div class="col-md-6">
+        <div class="card topo-card shadow-sm h-100">
+          <div class="card-body">
+            <h4 class="fw-bold">Topología en Estrella (Star)</h4>
+            <p class="text-muted small">Es la arquitectura estándar para el <strong>Cableado Estructurado</strong>. Todos los nodos se conectan a un concentrador central (Switch).</p>
+            <ul>
+              <li class="small"><strong>Ventaja:</strong> Si un cable falla, solo ese nodo se cae.</li>
+              <li class="small"><strong>Desventaja:</strong> Si el nodo central falla, toda la red cae.</li>
+            </ul>
+            <div class="img-placeholder">
+         <img src="img/topologia_estrella.png" 
+         alt="GRÁFICA: TOPOLOGÍA EN ESTRELLA"
+         style="width: 100%; height: auto;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card topo-card shadow-sm h-100" style="border-top-color: #198754;">
+          <div class="card-body">
+            <h4 class="fw-bold">Topología en Árbol (Tree)</h4>
+            <p class="text-muted small">Es una variante de la estrella conectada jerárquicamente. Se usa para conectar diferentes pisos o edificios (Backbone).</p>
+            <ul>
+              <li class="small"><strong>Uso:</strong> Ideal para redes de campus o edificios grandes.</li>
+            </ul>
+            <div class="img-placeholder">
+              <img src="img/topologia_arbol.jpg" 
+                   alt="GRÁFICA: TOPOLOGÍA EN ÁRBOL"
+                   style="width: 100%; height: auto;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card topo-card shadow-sm h-100" style="border-top-color: #ffc107;">
+          <div class="card-body">
+            <h4 class="fw-bold">Topología en Malla (Mesh)</h4>
+            <p class="text-muted small">Cada nodo tiene una conexión directa con todos los demás, permitiendo múltiples rutas para el tráfico de datos.</p>
+            <ul>
+              <li class="small"><strong>Ventaja:</strong> Máxima redundancia y tolerancia a fallos.</li>
+            </ul>
+            <div class="img-placeholder">
+              <img src="img/topologia_malla.png" 
+                   alt="GRÁFICA: TOPOLOGÍA EN MALLA"
+                   style="width: 100%; height: auto;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card topo-card shadow-sm h-100" style="border-top-color: #dc3545;">
+          <div class="card-body">
+            <h4 class="fw-bold">Bus y Anillo (Legacy)</h4>
+            <p class="text-muted small">Topologías clásicas donde los nodos comparten un mismo canal (Bus) o se conectan en círculo (Anillo).</p>
+            <ul>
+              <li class="small"><strong>Uso:</strong> Actualmente poco comunes en redes LAN modernas.</li>
+            </ul>
+            <div class="img-placeholder">
+              <img src="img/topologia_bus.png" 
+                   alt="GRÁFICA: BUS Y ANILLO"
+                   style="width: 100%; height: auto;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <footer class="text-center py-5 text-muted border-top mt-5">
+      <p class="mb-0 fw-bold">PROYECTO TERCER SEMESTRE - INGENIERÍA</p>
+      <p>&copy; 2026 Tutor Web. Todos los derechos reservados.</p>
+    </footer>
   </div>
 
 </body>
