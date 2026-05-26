@@ -5,30 +5,173 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tutor Web - Nosotros</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+    .bg-dark-custom {
+      background-color: #0f172a;
+    }
+    .card-shadow {
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+    .card-shadow:hover {
+      transform: translateY(-5px);
+    }
+    .profile-img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #0f172a;
+      margin-top: -70px;
+      background-color: white;
+    }
+    .card-spacing {
+      margin-top: 80px;
+    }
+  </style>
 </head>
-<body class="bg-light">
+<body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
-    <div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark-custom shadow-sm py-3">
+    <div class="container">
       <a class="navbar-brand fw-bold" href="index.html">Tutor Web</a>
-      <div class="d-flex" id="navbarNav">
-        <ul class="navbar-nav flex-row gap-3">
-        <li><a class="nav-link" href="index.html">🏠 Inicio </a></li>
-        <li><a class="nav-link active text-white fw-bold" href="nosotros.html">👥 Nosotros</a></li>
-        <li><a class="nav-link" href="tecnologia.html">💻 Tecnología</a></li>
-        <li><a class="nav-link" href="topologias.html">🕸️ Topologías</a></li>
-        <li><a class="nav-link" href="elementos.html">🔌 Elementos</a></li>
+      <div class="d-flex ms-auto">
+        <ul class="navbar-nav flex-row gap-4">
+          <li class="nav-item"><a class="nav-link text-white-50" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link active text-white fw-bold" href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link text-white-50" href="tecnologia.html">Tecnología</a></li>
+          <li class="nav-item"><a class="nav-link text-white-50" href="topologias.html">Topologías</a></li>
+          <li class="nav-item"><a class="nav-link text-white-50" href="elementos.html">Elementos</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <div class="container mt-5">
-    <div class="p-5 mb-4 bg-primary text-white rounded-3 shadow text-center">
-      <h1 class="display-4 fw-bold">Sobre Nosotros 👥</h1>
-      <p class="fs-4">Descripcion del equipo.</p>
+  <main class="container mt-5 mb-5">
+    
+    <div class="bg-dark-custom text-white p-5 rounded-4 shadow-sm text-center mb-5">
+      <h1 class="display-4 fw-bold mb-3">Equipo de Trabajo</h1>
+      <p class="fs-5 text-white-75 px-lg-5">
+        Conoce a los desarrolladores y arquitectos de red detrás de la plataforma Tutor Web.
+      </p>
     </div>
-  </div>
+
+    <div class="row g-4 justify-content-center">
+      
+      <div class="col-md-6 col-lg-4 card-spacing">
+        <div class="card card-shadow border-0 rounded-4 h-100 px-3 pb-3 text-center">
+          <img src="img/foto_1.jpg" alt="Foto Integrante 1" class="profile-img mx-auto shadow-sm">
+          <div class="card-body">
+            <h4 class="fw-bold text-dark mt-2">[Nombres]</h4>
+            <h5 class="text-primary mb-3">[Apellidos]</h5>
+            
+            <ul class="list-unstyled text-secondary text-start small mb-0">
+              <li class="mb-2"><strong>Fecha de Nacimiento:</strong> [Dato]</li>
+              <li class="mb-2"><strong>Skills:</strong> [Dato]</li>
+              <li class="mb-2"><strong>Libros leídos:</strong> [Dato]</li>
+              <li class="mb-2"><strong>Deportes:</strong> [Dato]</li>
+              <li class="mb-2"><strong>Hobbies:</strong> [Dato]</li>
+              <li class="mb-2"><strong>Películas:</strong> [Dato]</li>
+              <li class="mb-2"><strong>Certificaciones:</strong> [Dato]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 card-spacing">
+        <div class="card card-shadow border-0 rounded-4 h-100 px-3 pb-3 text-center">
+          <img src="img/foto_2.jpg" alt="Foto Integrante 2" class="profile-img mx-auto shadow-sm">
+          <div class="card-body">
+            <h4 class="fw-bold text-dark mt-2">[Nombres]</h4>
+            <h5 class="text-primary mb-3">[Apellidos]</h5>
+            
+            <ul class="list-unstyled text-secondary text-start small mb-0">
+              <li class="mb-2"><strong>Fecha de Nacimiento:</strong> [Dato]</li>
+              <li class="mb-2"><strong>Skills:</strong> [Dato]</li>
+              <li class="mb-2"><strong>Libros leídos:</strong> [Dato]</li>
+              <li class="mb-2"><strong>Deportes:</strong> [Dato]</li>
+              <li class="mb-2"><strong>Hobbies:</strong> [Dato]</li>
+              <li class="mb-2"><strong>Películas:</strong> [Dato]</li>
+              <li class="mb-2"><strong>Certificaciones:</strong> [Dato]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 card-spacing">
+        <div class="card card-shadow border-0 rounded-4 h-100 px-3 pb-3 text-center">
+          <img src="img/foto_3.jpg" alt="Foto Integrante 3" class="profile-img mx-auto shadow-sm">
+          <div class="card-body">
+            <h4 class="fw-bold text-dark mt-2">[Nombres]</h4>
+            <h5 class="text-primary mb-3">[Apellidos]</h5>
+            
+            <ul class="list-unstyled text-secondary text-start small mb-0">
+              <li class="mb-2"><strong>Fecha de Nacimiento:</strong> [Dato]</li>
+              <li class="mb-2"><strong>Skills:</strong> [Dato]</li>
+              <li class="mb-2"><strong>Libros leídos:</strong> [Dato]</li>
+              <li class="mb-2"><strong>Deportes:</strong> [Dato]</li>
+              <li class="mb-2"><strong>Hobbies:</strong> [Dato]</li>
+              <li class="mb-2"><strong>Películas:</strong> [Dato]</li>
+              <li class="mb-2"><strong>Certificaciones:</strong> [Dato]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 card-spacing">
+        <div class="card card-shadow border-0 rounded-4 h-100 px-3 pb-3 text-center">
+          <img src="img/foto_4.jpg" alt="Foto Integrante 4" class="profile-img mx-auto shadow-sm">
+          <div class="card-body">
+            <h4 class="fw-bold text-dark mt-2">[Nombres]</h4>
+            <h5 class="text-primary mb-3">[Apellidos]</h5>
+            
+            <ul class="list-unstyled text-secondary text-start small mb-0">
+              <li class="mb-2"><strong>Fecha de Nacimiento:</strong> [Dato]</li>
+              <li class="mb-2"><strong>Skills:</strong> [Dato]</li>
+              <li class="mb-2"><strong>Libros leídos:</strong> [Dato]</li>
+              <li class="mb-2"><strong>Deportes:</strong> [Dato]</li>
+              <li class="mb-2"><strong>Hobbies:</strong> [Dato]</li>
+              <li class="mb-2"><strong>Películas:</strong> [Dato]</li>
+              <li class="mb-2"><strong>Certificaciones:</strong> [Dato]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 card-spacing">
+        <div class="card card-shadow border-0 rounded-4 h-100 px-3 pb-3 text-center">
+          <img src="img/foto_5.jpg" alt="Foto Integrante 5" class="profile-img mx-auto shadow-sm">
+          <div class="card-body">
+            <h4 class="fw-bold text-dark mt-2">[Nombres]</h4>
+            <h5 class="text-primary mb-3">[Apellidos]</h5>
+            
+            <ul class="list-unstyled text-secondary text-start small mb-0">
+              <li class="mb-2"><strong>Fecha de Nacimiento:</strong> [Dato]</li>
+              <li class="mb-2"><strong>Skills:</strong> [Dato]</li>
+              <li class="mb-2"><strong>Libros leídos:</strong> [Dato]</li>
+              <li class="mb-2"><strong>Deportes:</strong> [Dato]</li>
+              <li class="mb-2"><strong>Hobbies:</strong> [Dato]</li>
+              <li class="mb-2"><strong>Películas:</strong> [Dato]</li>
+              <li class="mb-2"><strong>Certificaciones:</strong> [Dato]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="bg-dark-custom text-center py-4 mt-auto">
+    <div class="container text-white-50">
+      <p class="mb-1 fw-bold text-white">Proyecto de Infraestructura - Tutor Web</p>
+      <p class="small mb-0">Implementación de Cableado Estructurado y Servicios de Red</p>
+      <p class="small mb-0 mt-2">© 2026 Todos los derechos reservados</p>
+    </div>
+  </footer>
 
 </body>
 </html>

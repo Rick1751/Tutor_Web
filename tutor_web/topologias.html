@@ -6,123 +6,157 @@
   <title>Tutor Web - Topologías</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <style>
-    .img-placeholder { background-color: #f8f9fa; border: 2px dashed #dee2e6; padding: 20px; text-align: center; color: #adb5bd; border-radius: 12px; margin: 15px 0; }
-    .topo-card { transition: transform 0.3s ease; border-top: 4px solid #0d6efd; }
-    .topo-card:hover { transform: translateY(-5px); }
+    body {
+      background-color: #f8f9fa;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+    .bg-dark-custom {
+      background-color: #0f172a;
+    }
+    .text-justify {
+      text-align: justify;
+    }
+    .card-shadow {
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+    .card-shadow:hover {
+      transform: translateY(-5px);
+    }
+    .img-placeholder {
+      background-color: #f8f9fa;
+      border: 2px dashed #dee2e6;
+      padding: 20px;
+      text-align: center;
+      border-radius: 12px;
+    }
+    .img-placeholder img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
   </style>
 </head>
-<body class="bg-light">
+<body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
-    <div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark-custom shadow-sm py-3">
+    <div class="container">
       <a class="navbar-brand fw-bold" href="index.html">Tutor Web</a>
-      <div class="d-flex" id="navbarNav">
-        <ul class="navbar-nav flex-row gap-3">
-        <li><a class="nav-link" href="index.html">🏠 Inicio </a></li>
-        <li><a class="nav-link" href="nosotros.html">👥 Nosotros</a></li>
-        <li><a class="nav-link" href="tecnologia.html">💻 Tecnología</a></li>
-        <li><a class="nav-link active text-white fw-bold" href="topologias.html">🕸️ Topologías</a></li>
-        <li><a class="nav-link" href="elementos.html">🔌 Elementos</a></li>
+      <div class="d-flex ms-auto">
+        <ul class="navbar-nav flex-row gap-4">
+          <li class="nav-item"><a class="nav-link text-white-50" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link text-white-50" href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link text-white-50" href="tecnologia.html">Tecnología</a></li>
+          <li class="nav-item"><a class="nav-link active text-white fw-bold" href="topologias.html">Topologías</a></li>
+          <li class="nav-item"><a class="nav-link text-white-50" href="elementos.html">Elementos</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-
-  <div class="container mt-5">
-    <div class="p-5 mb-4 bg-primary text-white rounded-3 shadow text-center">
-      
-      <h1 class="display-4 fw-bold">Topologías de Red 🏗️</h1>
-      <p class="fs-4">Configuraciones físicas y lógicas de los nodos de comunicación.</p>
+  <main class="container mt-5 mb-5">
+    
+    <div class="bg-dark-custom text-white p-5 rounded-4 shadow-sm text-center mb-5">
+      <h1 class="display-4 fw-bold mb-3">Topologías de Red</h1>
+      <p class="fs-5 text-white-75 px-lg-5">
+        Configuraciones físicas y lógicas de los nodos de comunicación.
+      </p>
     </div>
 
     <div class="row mb-5">
       <div class="col-12">
-        <div class="card p-4 shadow-sm text-center">
-          <h2 class="text-primary fw-bold">Física vs Lógica</h2>
-          <p>En el diseño de redes, la <strong>topología física</strong> describe cómo están dispuestos los cables y dispositivos en el espacio real, mientras que la <strong>topología lógica</strong> describe cómo fluyen los datos a través de esos componentes.</p>
+        <div class="card card-shadow border-0 rounded-4 p-4 text-center">
+          <div class="card-body">
+            <h2 class="fw-bold text-primary mb-3">Física vs Lógica</h2>
+            <p class="fs-5 text-secondary text-justify mx-auto mb-0" style="max-width: 800px;">
+              En el diseño de redes, la <strong>topología física</strong> describe cómo están dispuestos los cables y dispositivos en el espacio real, mientras que la <strong>topología lógica</strong> describe cómo fluyen los datos a través de esos componentes.
+            </p>
+          </div>
         </div>
-     </div>
+      </div>
     </div>
 
-    <div class="row g-4">
+    <div class="row g-4 mb-5">
       
       <div class="col-md-6">
-        <div class="card topo-card shadow-sm h-100">
-          <div class="card-body">
-            <h4 class="fw-bold">Topología en Estrella (Star)</h4>
-            <p class="text-muted small">Es la arquitectura estándar para el <strong>Cableado Estructurado</strong>. Todos los nodos se conectan a un concentrador central (Switch).</p>
-            <ul>
-              <li class="small"><strong>Ventaja:</strong> Si un cable falla, solo ese nodo se cae.</li>
-              <li class="small"><strong>Desventaja:</strong> Si el nodo central falla, toda la red cae.</li>
+        <div class="card card-shadow border-0 rounded-4 h-100 p-4">
+          <div class="card-body d-flex flex-column">
+            <h4 class="fw-bold text-dark mb-3">Topología en Estrella (Star)</h4>
+            <p class="text-secondary text-justify mb-3">
+              Es la arquitectura estándar para el <strong>Cableado Estructurado</strong>. Todos los nodos se conectan a un concentrador central (Switch).
+            </p>
+            <ul class="text-secondary text-start mb-4">
+              <li><strong>Ventaja:</strong> Si un cable falla, solo ese nodo se cae.</li>
+              <li><strong>Desventaja:</strong> Si el nodo central falla, toda la red cae.</li>
             </ul>
-            <div class="img-placeholder">
-         <img src="img/topologia_estrella.png" 
-         alt="GRÁFICA: TOPOLOGÍA EN ESTRELLA"
-         style="width: 100%; height: auto;">
+            <div class="img-placeholder mt-auto">
+              <img src="img/topologia_estrella.png" alt="GRÁFICA: TOPOLOGÍA EN ESTRELLA">
             </div>
           </div>
         </div>
       </div>
 
       <div class="col-md-6">
-        <div class="card topo-card shadow-sm h-100" style="border-top-color: #198754;">
-          <div class="card-body">
-            <h4 class="fw-bold">Topología en Árbol (Tree)</h4>
-            <p class="text-muted small">Es una variante de la estrella conectada jerárquicamente. Se usa para conectar diferentes pisos o edificios (Backbone).</p>
-            <ul>
-              <li class="small"><strong>Uso:</strong> Ideal para redes de campus o edificios grandes.</li>
+        <div class="card card-shadow border-0 rounded-4 h-100 p-4">
+          <div class="card-body d-flex flex-column">
+            <h4 class="fw-bold text-dark mb-3">Topología en Árbol (Tree)</h4>
+            <p class="text-secondary text-justify mb-3">
+              Es una variante de la estrella conectada jerárquicamente. Se usa para conectar diferentes pisos o edificios (Backbone).
+            </p>
+            <ul class="text-secondary text-start mb-4">
+              <li><strong>Uso:</strong> Ideal para redes de campus o edificios grandes.</li>
             </ul>
-            <div class="img-placeholder">
-              <img src="img/topologia_arbol.jpg" 
-                   alt="GRÁFICA: TOPOLOGÍA EN ÁRBOL"
-                   style="width: 100%; height: auto;">
+            <div class="img-placeholder mt-auto">
+              <img src="img/topologia_arbol.jpg" alt="GRÁFICA: TOPOLOGÍA EN ÁRBOL">
             </div>
           </div>
         </div>
       </div>
 
       <div class="col-md-6">
-        <div class="card topo-card shadow-sm h-100" style="border-top-color: #ffc107;">
-          <div class="card-body">
-            <h4 class="fw-bold">Topología en Malla (Mesh)</h4>
-            <p class="text-muted small">Cada nodo tiene una conexión directa con todos los demás, permitiendo múltiples rutas para el tráfico de datos.</p>
-            <ul>
-              <li class="small"><strong>Ventaja:</strong> Máxima redundancia y tolerancia a fallos.</li>
+        <div class="card card-shadow border-0 rounded-4 h-100 p-4">
+          <div class="card-body d-flex flex-column">
+            <h4 class="fw-bold text-dark mb-3">Topología en Malla (Mesh)</h4>
+            <p class="text-secondary text-justify mb-3">
+              Cada nodo tiene una conexión directa con todos los demás, permitiendo múltiples rutas para el tráfico de datos.
+            </p>
+            <ul class="text-secondary text-start mb-4">
+              <li><strong>Ventaja:</strong> Máxima redundancia y tolerancia a fallos.</li>
             </ul>
-            <div class="img-placeholder">
-              <img src="img/topologia_malla.png" 
-                   alt="GRÁFICA: TOPOLOGÍA EN MALLA"
-                   style="width: 100%; height: auto;">
+            <div class="img-placeholder mt-auto">
+              <img src="img/topologia_malla.png" alt="GRÁFICA: TOPOLOGÍA EN MALLA">
             </div>
           </div>
         </div>
       </div>
 
       <div class="col-md-6">
-        <div class="card topo-card shadow-sm h-100" style="border-top-color: #dc3545;">
-          <div class="card-body">
-            <h4 class="fw-bold">Bus y Anillo (Legacy)</h4>
-            <p class="text-muted small">Topologías clásicas donde los nodos comparten un mismo canal (Bus) o se conectan en círculo (Anillo).</p>
-            <ul>
-              <li class="small"><strong>Uso:</strong> Actualmente poco comunes en redes LAN modernas.</li>
+        <div class="card card-shadow border-0 rounded-4 h-100 p-4">
+          <div class="card-body d-flex flex-column">
+            <h4 class="fw-bold text-dark mb-3">Bus y Anillo (Legacy)</h4>
+            <p class="text-secondary text-justify mb-3">
+              Topologías clásicas donde los nodos comparten un mismo canal (Bus) o se conectan en círculo (Anillo).
+            </p>
+            <ul class="text-secondary text-start mb-4">
+              <li><strong>Uso:</strong> Actualmente poco comunes en redes LAN modernas.</li>
             </ul>
-            <div class="img-placeholder">
-              <img src="img/topologia_bus.png" 
-                   alt="GRÁFICA: BUS Y ANILLO"
-                   style="width: 100%; height: auto;">
+            <div class="img-placeholder mt-auto">
+              <img src="img/topologia_bus.png" alt="GRÁFICA: BUS Y ANILLO">
             </div>
           </div>
         </div>
       </div>
 
     </div>
+  </main>
 
-    <footer class="text-center py-5 text-muted border-top mt-5">
-      <p class="mb-0 fw-bold">PROYECTO TERCER SEMESTRE - INGENIERÍA</p>
-      <p>&copy; 2026 Tutor Web. Todos los derechos reservados.</p>
-    </footer>
-  </div>
+  <footer class="bg-dark-custom text-center py-4 mt-auto">
+    <div class="container text-white-50">
+      <p class="mb-1 fw-bold text-white">Proyecto de Infraestructura - Tutor Web</p>
+      <p class="small mb-0">Implementación de Cableado Estructurado y Servicios de Red</p>
+      <p class="small mb-0 mt-2">© 2026 Todos los derechos reservados</p>
+    </div>
+  </footer>
 
 </body>
 </html>
