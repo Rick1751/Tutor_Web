@@ -1,35 +1,140 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tutor Web - Tecnología</title>
+
   <link rel="stylesheet" href="css/bootstrap.min.css">
+
   <style>
     body {
       background-color: #f8f9fa;
       font-family: system-ui, -apple-system, sans-serif;
     }
+
+    /* Tu color oscuro personalizado */
     .bg-dark-custom {
       background-color: #0f172a;
     }
-    .text-justify {
-      text-align: justify;
+
+    .titulo-seccion {
+      color: #0f172a;
+      font-weight: bold;
+      margin-bottom: 30px;
     }
-    .card-shadow {
-      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-      transition: transform 0.2s ease;
+
+    .card-custom {
+      border: none;
+      border-radius: 22px;
+      overflow: hidden;
+      transition: 0.3s;
+      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+      background: white;
+      height: 100%;
+      padding-bottom: 10px;
     }
-    .card-shadow:hover {
-      transform: translateY(-5px);
+
+    .card-body {
+      padding: 35px;
     }
+
+    .card-body p {
+      margin-top: 18px;
+      line-height: 1.9;
+      color: #333;
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+
+    .card-custom:hover {
+      transform: translateY(-6px);
+    }
+
+    .card-custom img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .info-box {
+      background: white;
+      border-radius: 22px;
+      padding: 30px;
+      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+      height: 100%;
+    }
+
+    .info-box img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 15px;
+    }
+
+    .table-custom {
+      background: white;
+      border-radius: 22px;
+      padding: 35px;
+      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+      border: 1px solid #dbe4ff;
+    }
+
+    .badge-custom {
+      background-color: #0d6efd;
+      padding: 8px 15px;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      color: white;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+
     .price {
       color: #0d6efd;
       font-weight: bold;
-      font-size: 1.25rem;
+      font-size: 1.1rem;
+    }
+
+    .top-card {
+      background: white;
+      border-radius: 22px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+      transition: 0.3s;
+      width: 100%;
+      height: 100%;
+    }
+
+    .top-card:hover {
+      transform: scale(1.03);
+    }
+
+    .top-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: contain;
+      object-position: center;
+      display: block;
+      margin: auto;
+    }
+
+    footer {
+      background-color: #0f172a;
+      color: white;
+      padding: 25px;
+      margin-top: 60px;
+      text-align: center;
     }
   </style>
+
 </head>
+
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark-custom shadow-sm py-3">
@@ -47,29 +152,34 @@
     </div>
   </nav>
 
-  <main class="container mt-5 mb-5">
-    
-    <div class="bg-dark-custom text-white p-5 rounded-4 shadow-sm text-center mb-5">
+  <div class="container my-5">
+    <div class="bg-dark-custom text-white p-5 rounded-4 shadow-sm text-center">
       <h1 class="display-4 fw-bold mb-3">Tecnología de Redes</h1>
       <p class="fs-5 text-white-75 px-lg-5">
         Tipos de cableado y dispositivos utilizados en redes modernas.
       </p>
     </div>
+  </div>
 
-    <div class="row mb-5">
-      <div class="col-12 mb-4">
-        <h2 class="fw-bold text-primary text-center">Tipos de Cable y Velocidad según la Categoría</h2>
-      </div>
-
-      <div class="col-md-6 mb-4">
-        <div class="card card-shadow border-0 rounded-4 overflow-hidden h-100">
-          <img src="img/utp.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Cable UTP">
-          <div class="card-body p-4 bg-white d-flex flex-column">
-            <h3 class="fw-bold text-dark mb-3">Cable de Par Trenzado</h3>
-            <p class="text-secondary text-justify mb-3">
+  <div class="container my-5">
+    <h2 class="titulo-seccion text-center">
+      Tipos de Cable y Velocidad según la Categoría
+    </h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card-custom">
+          <img src="img/utp.jpg" alt="Cable UTP">
+          <div class="p-5 px-5 pb-4">
+            <span class="badge-custom">
+              Cable UTP
+            </span>
+            <h3 class="text-primary fw-bold">
+              Cable de Par Trenzado
+            </h3>
+            <p>
               Cable utilizado en redes LAN por su facilidad de instalación y bajo costo.
             </p>
-            <ul class="text-secondary text-start mt-auto mb-0">
+            <ul>
               <li>Conector RJ-45</li>
               <li>Hasta 10 Gbps</li>
               <li>Uso doméstico y empresarial</li>
@@ -77,101 +187,105 @@
           </div>
         </div>
       </div>
-
-      <div class="col-md-6 mb-4">
-        <div class="card card-shadow border-0 rounded-4 overflow-hidden h-100">
-          <img src="img/fibra.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Fibra Optica">
-          <div class="card-body p-4 bg-white d-flex flex-column">
-            <h3 class="fw-bold text-dark mb-3">Transmisión por Luz</h3>
-            <p class="text-secondary text-justify mb-3">
+      <div class="col-md-6">
+        <div class="card-custom">
+          <img src="img/fibra.jpg" alt="Fibra Optica">
+          <div class="p-5 px-5 pb-4">
+            <span class="badge-custom">
+              Fibra Óptica
+            </span>
+            <h3 class="text-primary fw-bold">
+              Transmisión por Luz
+            </h3>
+            <p>
               Medio de transmisión de alta velocidad y gran estabilidad.
             </p>
-            <zul class="text-secondary text-start mt-auto mb-0">
+            <ul>
               <li>Más de 100 Gbps</li>
               <li>Mayor seguridad</li>
               <li>Ideal para backbone</li>
-            </zul>
+            </ul>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="row mb-5 justify-content-center">
-      <div class="col-lg-10">
-        <div class="card card-shadow border-0 rounded-4 p-4 p-lg-5">
-          <div class="card-body">
-            <h3 class="fw-bold text-primary text-center mb-4">Comparativa de Categorías de Red</h3>
-            <div class="table-responsive">
-              <table class="table table-hover align-middle text-center mb-0">
-                <thead class="table-primary">
-                  <tr>
-                    <th class="py-3">Categoría</th>
-                    <th class="py-3">Velocidad</th>
-                    <th class="py-3">Frecuencia</th>
-                    <th class="py-3">Uso</th>
-                  </tr>
-                </thead>
-                <tbody class="text-secondary">
-                  <tr>
-                    <td class="py-3">Cat5e</td>
-                    <td class="py-3">1 Gbps</td>
-                    <td class="py-3">100 MHz</td>
-                    <td class="py-3">Hogares</td>
-                  </tr>
-                  <tr>
-                    <td class="py-3">Cat6</td>
-                    <td class="py-3">10 Gbps</td>
-                    <td class="py-3">250 MHz</td>
-                    <td class="py-3">Empresas</td>
-                  </tr>
-                  <tr>
-                    <td class="py-3">Cat6a</td>
-                    <td class="py-3">10 Gbps</td>
-                    <td class="py-3">500 MHz</td>
-                    <td class="py-3">Centros de datos</td>
-                  </tr>
-                  <tr>
-                    <td class="py-3">Fibra Óptica</td>
-                    <td class="py-3">100+ Gbps</td>
-                    <td class="py-3">Muy Alta</td>
-                    <td class="py-3">Backbone</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
+    <div class="mt-5">
+      <div class="table-custom px-5 py-5 text-center">
+        <h3 class="text-primary fw-bold mb-4">
+          Comparativa de Categorías de Red
+        </h3>
+        <table class="table align-middle border border-primary mx-auto" style="width: 75%;">
+          <thead class="table-primary">
+            <tr>
+              <th class="py-3 border border-primary text-center">Categoría</th>
+              <th class="py-3 border border-primary text-center">Velocidad</th>
+              <th class="py-3 border border-primary text-center">Frecuencia</th>
+              <th class="py-3 border border-primary text-center">Uso</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="py-3 border border-primary">Cat5e</td>
+              <td class="py-3 border border-primary">1 Gbps</td>
+              <td class="py-3 border border-primary">100 MHz</td>
+              <td class="py-3 border border-primary">Hogares</td>
+            </tr>
+            <tr>
+              <td class="py-3 border border-primary">Cat6</td>
+              <td class="py-3 border border-primary">10 Gbps</td>
+              <td class="py-3 border border-primary">250 MHz</td>
+              <td class="py-3 border border-primary">Empresas</td>
+            </tr>
+            <tr>
+              <td class="py-3 border border-primary">Cat6a</td>
+              <td class="py-3 border border-primary">10 Gbps</td>
+              <td class="py-3 border border-primary">500 MHz</td>
+              <td class="py-3 border border-primary">Centros de datos</td>
+            </tr>
+            <tr>
+              <td class="py-3 border border-primary">Fibra Óptica</td>
+              <td class="py-3 border border-primary">100+ Gbps</td>
+              <td class="py-3 border border-primary">Muy Alta</td>
+              <td class="py-3 border border-primary">Backbone</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
+  </div>
 
-    <div class="row mb-4">
-      <div class="col-12 mb-4">
-        <h2 class="fw-bold text-primary text-center">Dispositivos Alámbricos</h2>
-      </div>
-
-      <div class="col-md-6 mb-4">
-        <div class="card card-shadow border-0 rounded-4 p-4 h-100">
-          <img src="img/router.jpg" class="img-fluid rounded-4 mb-4" style="height: 200px; object-fit: cover;" alt="Router">
-          <h3 class="fw-bold text-dark mb-3">Router</h3>
-          <p class="text-secondary text-justify mb-3">
+  <div class="container my-5">
+    <h2 class="titulo-seccion text-center">
+      Dispositivos Alámbricos
+    </h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="info-box">
+          <img src="img/router.jpg" alt="Router">
+          <h3 class="text-primary fw-bold mt-3">
+            Router
+          </h3>
+          <p>
             Conecta diferentes redes y administra el tráfico de datos.
           </p>
-          <ul class="text-secondary text-start mb-0">
+          <ul>
             <li>Firewall integrado</li>
             <li>Alta estabilidad</li>
             <li>Control de tráfico</li>
           </ul>
         </div>
       </div>
-
-      <div class="col-md-6 mb-4">
-        <div class="card card-shadow border-0 rounded-4 p-4 h-100">
-          <img src="img/switch.jpg" class="img-fluid rounded-4 mb-4" style="height: 200px; object-fit: cover;" alt="Switch">
-          <h3 class="fw-bold text-dark mb-3">Switch</h3>
-          <p class="text-secondary text-justify mb-3">
+      <div class="col-md-6">
+        <div class="info-box">
+          <img src="img/switch.jpg" alt="Switch">
+          <h3 class="text-primary fw-bold mt-3">
+            Switch
+          </h3>
+          <p>
             Permite conectar varios dispositivos dentro de una red local.
           </p>
-          <ul class="text-secondary text-start mb-0">
+          <ul>
             <li>Alta velocidad</li>
             <li>Reduce colisiones</li>
             <li>Optimiza tráfico</li>
@@ -180,85 +294,104 @@
       </div>
     </div>
 
-    <div class="row mb-5 justify-content-center">
-      <div class="col-12 mb-4">
-        <h3 class="fw-bold text-primary text-center">Top 5 Dispositivos Alámbricos</h3>
-      </div>
-      
-      <div class="col-md-4 mb-4">
-        <div class="card card-shadow border-0 rounded-4 h-100 p-4 text-center d-flex flex-column">
-          <img src="img/cisco.png" alt="Cisco" class="img-fluid mx-auto mb-3" style="height: 100px; object-fit: contain;">
-          <h4 class="fw-bold text-dark mt-2">Cisco Catalyst</h4>
-          <p class="text-secondary mb-3">Switch empresarial de alto rendimiento.</p>
-          <p class="price mt-auto mb-0">$450 USD</p>
+    <div class="mt-5">
+      <h3 class="text-center fw-bold text-primary mb-4">
+        Top 5 Dispositivos Alámbricos
+      </h3>
+      <div class="row justify-content-center g-4">
+        <div class="col-md-4 d-flex">
+          <div class="top-card">
+            <img src="img/cisco.png" alt="Cisco">
+            <h4 class="fw-bold mt-3">
+              Cisco Catalyst
+            </h4>
+            <p>
+              Switch empresarial de alto rendimiento.
+            </p>
+            <p class="price">
+              $450 USD
+            </p>
+          </div>
         </div>
-      </div>
-
-      <div class="col-md-4 mb-4">
-        <div class="card card-shadow border-0 rounded-4 h-100 p-4 text-center d-flex flex-column">
-          <img src="img/tplink.png" alt="TP-Link" class="img-fluid mx-auto mb-3" style="height: 100px; object-fit: contain;">
-          <h4 class="fw-bold text-dark mt-2">TP-Link JetStream</h4>
-          <p class="text-secondary mb-3">Excelente rendimiento para oficinas.</p>
-          <p class="price mt-auto mb-0">$220 USD</p>
+        <div class="col-md-4 d-flex">
+          <div class="top-card">
+            <img src="img/tplink.png" alt="TP-Link">
+            <h4 class="fw-bold mt-3">
+              TP-Link JetStream
+            </h4>
+            <p>
+              Excelente rendimiento para oficinas.
+            </p>
+            <p class="price">
+              $220 USD
+            </p>
+          </div>
         </div>
-      </div>
-
-      <div class="col-md-4 mb-4">
-        <div class="card card-shadow border-0 rounded-4 h-100 p-4 text-center d-flex flex-column">
-          <img src="img/netgear.png" alt="Netgear" class="img-fluid mx-auto mb-3" style="height: 100px; object-fit: contain;">
-          <h4 class="fw-bold text-dark mt-2">Netgear GS308</h4>
-          <p class="text-secondary mb-3">Ideal para redes pequeñas.</p>
-          <p class="price mt-auto mb-0">$60 USD</p>
+        <div class="col-md-4 d-flex">
+          <div class="top-card">
+            <img src="img/netgear.png" alt="Netgear">
+            <h4 class="fw-bold mt-3">
+              Netgear GS308
+            </h4>
+            <p>
+              Ideal para redes pequeñas.
+            </p>
+            <p class="price">
+              $60 USD
+            </p>
+          </div>
         </div>
-      </div>
-
-      <div class="col-md-4 mb-4">
-        <div class="card card-shadow border-0 rounded-4 h-100 p-4 text-center d-flex flex-column">
-          <img src="img/dlink.jpg" alt="D-Link" class="img-fluid mx-auto mb-3 rounded" style="height: 100px; object-fit: contain;">
-          <h4 class="fw-bold text-dark mt-2">D-Link DGS-108</h4>
-          <p class="text-secondary mb-3">Switch confiable y económico para redes domésticas.</p>
-          <p class="price mt-auto mb-0">$65 USD</p>
+        <div class="col-md-4 d-flex">
+          <div class="top-card">
+            <img src="img/dlink.jpg" class="img-fluid rounded mb-3 img-top">
+            <h4 class="fw-bold mt-3">D-Link DGS-108</h4>
+            <p>Switch confiable y económico para redes domésticas.</p>
+            <h3 class="price">$65 USD</h3>
+          </div>
         </div>
-      </div>
-
-      <div class="col-md-4 mb-4">
-        <div class="card card-shadow border-0 rounded-4 h-100 p-4 text-center d-flex flex-column">
-          <img src="img/ubiquiti.jpg" alt="Ubiquiti" class="img-fluid mx-auto mb-3 rounded" style="height: 100px; object-fit: contain;">
-          <h4 class="fw-bold text-dark mt-2">Ubiquiti EdgeSwitch</h4>
-          <p class="text-secondary mb-3">Gran capacidad y estabilidad para empresas.</p>
-          <p class="price mt-auto mb-0">$390 USD</p>
+        <div class="col-md-4 d-flex">
+          <div class="top-card">
+            <img src="img/ubiquiti.jpg" class="img-fluid rounded mb-3 img-top">
+            <h4 class="fw-bold mt-3">Ubiquiti EdgeSwitch</h4>
+            <p>Gran capacidad y estabilidad para empresas.</p>
+            <h3 class="price">$390 USD</h3>
+          </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="row mb-4">
-      <div class="col-12 mb-4">
-        <h2 class="fw-bold text-primary text-center">Dispositivos Inalámbricos</h2>
-      </div>
-
-      <div class="col-md-6 mb-4">
-        <div class="card card-shadow border-0 rounded-4 p-4 h-100">
-          <img src="img/accesspoint.jpg" class="img-fluid rounded-4 mb-4" style="height: 200px; object-fit: cover;" alt="Access Point">
-          <h3 class="fw-bold text-dark mb-3">Access Point</h3>
-          <p class="text-secondary text-justify mb-3">
+  <div class="container my-5">
+    <h2 class="titulo-seccion text-center">
+      Dispositivos Inalámbricos
+    </h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="info-box">
+          <img src="img/accesspoint.jpg" alt="Access Point">
+          <h3 class="text-primary fw-bold mt-3">
+            Access Point
+          </h3>
+          <p>
             Distribuye señal Wi-Fi en redes inalámbricas.
           </p>
-          <ul class="text-secondary text-start mb-0">
+          <ul>
             <li>Mayor cobertura</li>
             <li>Conexión estable</li>
             <li>Múltiples dispositivos</li>
           </ul>
         </div>
       </div>
-
-      <div class="col-md-6 mb-4">
-        <div class="card card-shadow border-0 rounded-4 p-4 h-100">
-          <img src="img/repetidor.jpg" class="img-fluid rounded-4 mb-4" style="height: 200px; object-fit: cover;" alt="Repetidor">
-          <h3 class="fw-bold text-dark mb-3">Repetidor Wi-Fi</h3>
-          <p class="text-secondary text-justify mb-3">
+      <div class="col-md-6">
+        <div class="info-box">
+          <img src="img/repetidor.jpg" alt="Repetidor">
+          <h3 class="text-primary fw-bold mt-3">
+            Repetidor Wi-Fi
+          </h3>
+          <p>
             Amplía la cobertura inalámbrica en zonas alejadas.
           </p>
-          <ul class="text-secondary text-start mb-0">
+          <ul>
             <li>Reduce zonas muertas</li>
             <li>Fácil instalación</li>
             <li>Mayor alcance</li>
@@ -267,66 +400,91 @@
       </div>
     </div>
 
-    <div class="row mb-5 justify-content-center">
-      <div class="col-12 mb-4">
-        <h3 class="fw-bold text-primary text-center">Top 5 Dispositivos Inalámbricos</h3>
-      </div>
-      
-      <div class="col-md-4 mb-4">
-        <div class="card card-shadow border-0 rounded-4 h-100 p-4 text-center d-flex flex-column">
-          <img src="img/unifi.png" alt="UniFi" class="img-fluid mx-auto mb-3" style="height: 100px; object-fit: contain;">
-          <h4 class="fw-bold text-dark mt-2">Ubiquiti UniFi</h4>
-          <p class="text-secondary mb-3">Excelente cobertura y administración.</p>
-          <p class="price mt-auto mb-0">$210 USD</p>
+    <div class="mt-5">
+      <h3 class="text-center fw-bold text-primary mb-4">
+        Top 5 Dispositivos Inalámbricos
+      </h3>
+      <div class="row justify-content-center g-4">
+        <div class="col-md-4 d-flex">
+          <div class="top-card">
+            <img src="img/unifi.png" alt="UniFi">
+            <h4 class="fw-bold mt-3">
+              Ubiquiti UniFi
+            </h4>
+            <p>
+              Excelente cobertura y administración.
+            </p>
+            <p class="price">
+              $210 USD
+            </p>
+          </div>
         </div>
-      </div>
-
-      <div class="col-md-4 mb-4">
-        <div class="card card-shadow border-0 rounded-4 h-100 p-4 text-center d-flex flex-column">
-          <img src="img/asus.png" alt="ASUS" class="img-fluid mx-auto mb-3" style="height: 100px; object-fit: contain;">
-          <h4 class="fw-bold text-dark mt-2">ASUS RT-AX82U</h4>
-          <p class="text-secondary mb-3">Router gamer Wi-Fi 6.</p>
-          <p class="price mt-auto mb-0">$320 USD</p>
+        <div class="col-md-4 d-flex">
+          <div class="top-card">
+            <img src="img/asus.png" alt="ASUS">
+            <h4 class="fw-bold mt-3">
+              ASUS RT-AX82U
+            </h4>
+            <p>
+              Router gamer Wi-Fi 6.
+            </p>
+            <p class="price">
+              $320 USD
+            </p>
+          </div>
         </div>
-      </div>
-
-      <div class="col-md-4 mb-4">
-        <div class="card card-shadow border-0 rounded-4 h-100 p-4 text-center d-flex flex-column">
-          <img src="img/tenda.png" alt="Tenda" class="img-fluid mx-auto mb-3" style="height: 100px; object-fit: contain;">
-          <h4 class="fw-bold text-dark mt-2">Tenda Nova</h4>
-          <p class="text-secondary mb-3">Sistema Mesh moderno.</p>
-          <p class="price mt-auto mb-0">$160 USD</p>
+        <div class="col-md-4 d-flex">
+          <div class="top-card">
+            <img src="img/tenda.png" alt="Tenda">
+            <h4 class="fw-bold mt-3">
+              Tenda Nova
+            </h4>
+            <p>
+              Sistema Mesh moderno.
+            </p>
+            <p class="price">
+              $160 USD
+            </p>
+          </div>
         </div>
-      </div>
-
-      <div class="col-md-4 mb-4">
-        <div class="card card-shadow border-0 rounded-4 h-100 p-4 text-center d-flex flex-column">
-          <img src="img/starlink.jpg" alt="Starlink" class="img-fluid mx-auto mb-3 rounded" style="height: 100px; object-fit: contain;">
-          <h4 class="fw-bold text-dark mt-2">Starlink Gen 3</h4>
-          <p class="text-secondary mb-3">Internet satelital de alta velocidad y baja latencia.</p>
-          <p class="price mt-auto mb-0">$599 USD</p>
+        <div class="col-md-4 d-flex">
+          <div class="top-card">
+            <img src="img/starlink.jpg">
+            <h4 class="fw-bold mt-3">
+              Starlink Gen 3
+            </h4>
+            <p>
+              Internet satelital de alta velocidad y baja latencia.
+            </p>
+            <p class="price">
+              $599 USD
+            </p>
+          </div>
         </div>
-      </div>
-
-      <div class="col-md-4 mb-4">
-        <div class="card card-shadow border-0 rounded-4 h-100 p-4 text-center d-flex flex-column">
-          <img src="img/netlife.jpg" alt="Netlife" class="img-fluid mx-auto mb-3 rounded" style="height: 100px; object-fit: contain;">
-          <h4 class="fw-bold text-dark mt-2">Netlife WiFi 6</h4>
-          <p class="text-secondary mb-3">Última generación de conectividad inalámbrica para hogares.</p>
-          <p class="price mt-auto mb-0">$120 USD</p>
+        <div class="col-md-4 d-flex">
+          <div class="top-card">
+            <img src="img/netlife.jpg">
+            <h4 class="fw-bold mt-3">
+              Netlife WiFi 6
+            </h4>
+            <p>
+              Última generación de conectividad inalámbrica para hogares.
+            </p>
+            <p class="price">
+              $120 USD
+            </p>
+          </div>
         </div>
       </div>
     </div>
+  </div>
 
-  </main>
-
-  <footer class="bg-dark-custom text-center py-4 mt-auto">
-    <div class="container text-white-50">
-      <p class="mb-1 fw-bold text-white">Proyecto de Infraestructura - Tutor Web</p>
-      <p class="small mb-0">Implementación de Cableado Estructurado y Servicios de Red</p>
-      <p class="small mb-0 mt-2">© 2026 Todos los derechos reservados</p>
-    </div>
+  <footer>
+    <p class="mb-0 fw-bold">
+      © 2026 Proyecto Tutor Web - Tecnología de Redes
+    </p>
   </footer>
 
 </body>
+
 </html>
