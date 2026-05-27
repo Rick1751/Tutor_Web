@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tutor Web - Elementos</title>
+  <title>Tutor Web - Elementos del Cableado Estructurado</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <style>
     body {
@@ -17,11 +17,57 @@
       text-align: justify;
     }
     .card-shadow {
-      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-      transition: transform 0.2s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
     .card-shadow:hover {
       transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    }
+    .academic-badge {
+      background-color: #2563eb;
+      color: white;
+      font-size: 0.75rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 6px 12px;
+      border-radius: 50px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+    .technical-note {
+      background-color: #eff6ff;
+      border-left: 4px solid #2563eb;
+      padding: 15px;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.9rem;
+      color: #1e40af;
+      margin-top: 15px;
+    }
+    .spec-list li {
+      margin-bottom: 6px;
+    }
+    /* Estilos corregidos para los recuadros de Pilares de Ingeniería */
+    .pilar-card {
+      background: white;
+      border: none;
+      border-radius: 16px;
+      padding: 45px 35px; /* Mayor espacio interno para que la letra no toque los bordes */
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Centrado vertical del contenido */
+      align-items: center;     /* Centrado horizontal del contenido */
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      transition: transform 0.2s ease;
+    }
+    .pilar-card:hover {
+      transform: translateY(-5px);
+    }
+    .pilar-card p {
+      line-height: 1.7;
+      margin-bottom: 0;
     }
   </style>
 </head>
@@ -30,7 +76,7 @@
   
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark-custom shadow-sm py-3">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">Tutor Web</a>
+      <a class="navbar-brand fw-bold" href="index.html">Tutor Redes e Infraestructura</a>
       <div class="d-flex ms-auto">
         <ul class="navbar-nav flex-row gap-4">
           <li class="nav-item"><a class="nav-link text-white-50" href="index.html">Inicio</a></li>
@@ -46,18 +92,23 @@
   <main class="container mt-5 mb-5">
 
     <div class="bg-dark-custom text-white p-5 rounded-4 shadow-sm text-center mb-5">
-      <h1 class="display-4 fw-bold mb-3">Elementos del Cableado Estructurado</h1>
+      <span class="badge bg-primary px-3 py-2 mb-3 text-uppercase fw-semibold" style="letter-spacing: 1px;">Arquitectura de Planta Interna Física</span>
+      <h1 class="display-4 fw-bold mb-3">Subsistemas del Cableado Estructurado</h1>
       <p class="fs-5 text-white-75 px-lg-5">
-        Conoce los componentes principales que permiten organizar, conectar y proteger una red de datos.
+        Estudio profundo de los componentes estandarizados que rigen el diseño, distribución, confinamiento y administración de los sistemas de telecomunicaciones empresariales.
       </p>
     </div>
 
     <div class="row mb-5">
       <div class="col-12">
         <div class="card card-shadow border-0 rounded-4 p-4">
-          <div class="card-body text-center">
-            <p class="fs-5 text-secondary text-justify mb-0">
-              El cableado estructurado es una infraestructura organizada que permite transmitir datos, voz y video dentro de una red de comunicación. Estos elementos son fundamentales para garantizar estabilidad, velocidad y seguridad en la conectividad de empresas, instituciones y hogares modernos.
+          <div class="card-body">
+            <h2 class="fw-bold text-dark mb-3 text-center">¿Qué es un Sistema de Cableado Estructurado (SCE)?</h2>
+            <p class="fs-5 text-secondary text-justify mb-3">
+              Un Sistema de Cableado Estructurado es una infraestructura de medios de transmisión físicos (cobre, fibra óptica) y hardware de conexión asociado, diseñada de manera genérica para soportar una amplia gama de servicios de voz, datos y video, independientemente de los equipos activos finales. 
+            </p>
+            <p class="text-muted text-justify mb-0">
+              Su arquitectura está rígidamente normalizada por organismos internacionales como la <strong>TIA/EIA (Telecommunications Industry Association)</strong> y la <strong>ISO/IEC</strong>. Diseñar bajo estos lineamientos garantiza un ciclo de vida operativo prolongado (más de 15 años), topologías abiertas y una administración sumamente simplificada ante movimientos, adiciones o cambios en la red.
             </p>
           </div>
         </div>
@@ -68,118 +119,143 @@
       
       <div class="col-md-6">
         <div class="card card-shadow border-0 rounded-4 overflow-hidden h-100">
-          <img src="img/horizontal.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Cableado horizontal">
-          <div class="card-body p-4 bg-white">
-            <h3 class="fw-bold text-dark mb-3">Cableado Horizontal</h3>
-            <p class="text-secondary text-justify">
-              Es el cableado que conecta los dispositivos finales, como computadoras, impresoras, cámaras o teléfonos IP, con el cuarto de comunicaciones.
-            </p>
-            <p class="text-secondary text-justify">
-              Generalmente utiliza cable UTP y se instala dentro de una misma planta o área de trabajo.
-            </p>
-            <p class="text-secondary text-justify">
-              Este tipo de cableado es importante porque permite que cada punto de red llegue hasta el usuario final. Su correcta instalación evita interferencias, pérdida de señal y problemas de conexión.
-            </p>
-            <ul class="text-secondary text-start mt-3">
-              <li>Conecta dispositivos finales dentro de una misma área.</li>
-              <li>Utiliza principalmente cable UTP.</li>
-              <li>Tiene una longitud máxima aproximada de 90 metros.</li>
-              <li>Forma parte de la red interna de una planta.</li>
-            </ul>
+          <img src="img/horizontal.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Cableado horizontal de red">
+          <div class="card-body p-4 bg-white d-flex flex-column justify-content-between">
+            <div>
+              <div class="academic-badge">Norma ANSI/TIA-568-C.1</div>
+              <h3 class="fw-bold text-dark mb-3">Cableado Horizontal</h3>
+              <p class="text-secondary text-justify mb-3">
+                El subsistema horizontal comprende los cables que se extienden desde el Área de Trabajo (WA) hasta el Cuarto de Telecomunicaciones (TR). Incluye las salidas/tomas de telecomunicaciones en el área de trabajo, las terminaciones mecánicas del cable (módulos keystone, patch panels) y los puentes o cordones (patch cords) utilizados en el TR.
+              </p>
+              <p class="text-secondary text-justify mb-3">
+                Se distribuye de manera radial (topología en estrella) partiendo desde el distribuidor de piso. La planificación debe prever un mínimo de dos salidas de telecomunicaciones por cada área de trabajo para garantizar redundancia y servicios mixtos.
+              </p>
+            </div>
+            <div>
+              <div class="technical-note">
+                <strong>Parámetros de Distancia Críticos:</strong>
+                <br>• <strong>Enlace Permanente:</strong> Máximo 90 metros de cable físico tendido entre la toma y el patch panel.
+                <br>• <strong>Canal Completo:</strong> Máximo 100 metros totales, permitiendo hasta 10 metros combinados para patch cords (área de trabajo y cuarto de comunicaciones).
+              </div>
+              <ul class="text-secondary text-start mt-3 spec-list small">
+                <li><strong>Medios comúnmente admitidos:</strong> Cable UTP/F-UTP Categorías 6, 6A u 8, y Fibra Óptica Multimodo.</li>
+                <li>No se permiten empalmes, puentes ni derivaciones (taps) en ningún punto del trayecto horizontal.</li>
+                <li>Debe mantenerse separado de cables de energía eléctrica para mitigar la interferencia electromagnética (EMI).</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="col-md-6">
         <div class="card card-shadow border-0 rounded-4 overflow-hidden h-100">
-          <img src="img/backbone.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Cableado vertical">
-          <div class="card-body p-4 bg-white">
-            <h3 class="fw-bold text-dark mb-3">Cableado Vertical o Backbone</h3>
-            <p class="text-secondary text-justify">
-              Es el cableado principal que conecta diferentes pisos, edificios o cuartos de comunicaciones.
-            </p>
-            <p class="text-secondary text-justify">
-              Se usa para transportar grandes cantidades de información y normalmente puede emplear fibra óptica.
-            </p>
-            <p class="text-secondary text-justify">
-              Su función es unir las áreas principales de la red, por eso debe tener mayor capacidad y estabilidad. Es clave en edificios grandes, campus o empresas con varios pisos.
-            </p>
-            <ul class="text-secondary text-start mt-3">
-              <li>Interconecta pisos o edificios.</li>
-              <li>Maneja grandes volúmenes de tráfico.</li>
-              <li>Puede utilizar fibra óptica.</li>
-              <li>Es el núcleo principal de comunicación.</li>
-            </ul>
+          <img src="img/backbone.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Cableado vertical backbone de fibra óptica">
+          <div class="card-body p-4 bg-white d-flex flex-column justify-content-between">
+            <div>
+              <div class="academic-badge">Interconexión de Distribuidores</div>
+              <h3 class="fw-bold text-dark mb-3">Cableado Vertical o Backbone</h3>
+              <p class="text-secondary text-justify mb-3">
+                También denominado columna vertebral, proporciona interconexiones entre los Cuartos de Telecomunicaciones (TR), los Cuartos de Equipos (ER) y las instalaciones de entrada (EF) del edificio. Consiste en los medios de transmisión, los distribuidores intermedios y principales (MC/IC), y las terminaciones mecánicas asociadas.
+              </p>
+              <p class="text-secondary text-justify mb-3">
+                Soporta el tráfico agregado de toda la red local, por lo que exige un ancho de banda muy superior al horizontal. Puede estructurarse en dos niveles jerárquicos de distribuidores para evitar bucles lógicos y optimizar el enrutamiento físico.
+              </p>
+            </div>
+            <div>
+              <div class="technical-note">
+                <strong>Estándares de Diseño y Distancia:</strong>
+                <br>• <strong>Fibra Multimodo (OM3/OM4):</strong> Hasta 300 metros para enlaces troncales de alta velocidad.
+                <br>• <strong>Fibra Monomodo (OS2):</strong> Hasta 2,000 metros, ideal para backbones de campus interedificios.
+                <br>• <strong>Multiparámetro de Cobre:</strong> Limitado a 90 metros para voz analógica/digital.
+              </div>
+              <ul class="text-secondary text-start mt-3 spec-list small">
+                <li><strong>Criterio de Diseño:</strong> Se debe considerar el crecimiento futuro basándose en aplicaciones de 40 Gbps y 100 Gbps.</li>
+                <li>Requiere sistemas estrictos de soporte mecánico (mallas o bandejas) para contrarrestar el estrés por peso vertical.</li>
+                <li>Es el núcleo estructural que unifica la topología de estrella jerárquica de la red.</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="col-md-6">
         <div class="card card-shadow border-0 rounded-4 overflow-hidden h-100">
-          <img src="img/cuarto.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Cuarto de comunicaciones">
-          <div class="card-body p-4 bg-white">
-            <h3 class="fw-bold text-dark mb-3">Cuarto de Comunicaciones</h3>
-            <p class="text-secondary text-justify">
-              Es el espacio físico donde se ubican equipos como switches, routers, patch panels, racks y organizadores de cable.
-            </p>
-            <p class="text-secondary text-justify">
-              Desde este punto se distribuye la conectividad hacia las diferentes áreas de la red.
-            </p>
-            <p class="text-secondary text-justify">
-              Debe mantenerse ordenado, ventilado y protegido, ya que concentra los equipos que permiten el funcionamiento de la red.
-            </p>
-            <ul class="text-secondary text-start mt-3">
-              <li>Centraliza conexiones de red.</li>
-              <li>Contiene equipos como switches y routers.</li>
-              <li>Facilita el mantenimiento del cableado.</li>
-              <li>Mejora la organización de la infraestructura.</li>
-            </ul>
+          <img src="img/cuarto.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Cuarto de telecomunicaciones rack y servidores">
+          <div class="card-body p-4 bg-white d-flex flex-column justify-content-between">
+            <div>
+              <div class="academic-badge">Norma ANSI/TIA-569-B / Administración</div>
+              <h3 class="fw-bold text-dark mb-3">Cuarto de Comunicaciones (TR / ER)</h3>
+              <p class="text-secondary text-justify mb-3">
+                Es el espacio arquitectónico centralizado destinado a la terminación mecánica de los subsistemas horizontal y vertical, además del alojamiento de los equipos de telecomunicaciones activos (Switches, Routers, Firewalls, Servidores de borde) y componentes de administración como los Patch Panels.
+              </p>
+              <p class="text-secondary text-justify mb-3">
+                Debe estar diseñado exclusivamente para funciones de telecomunicaciones, evitando compartir el espacio con tableros eléctricos de alta potencia o sistemas de cañerías hidráulicas que pongan en riesgo la integridad física del hardware.
+              </p>
+            </div>
+            <div>
+              <div class="technical-note">
+                <strong>Requerimientos Ambientales y Físicos (TIA-569):</strong>
+                <br>• <strong>Climatización Activa:</strong> HVAC dedicado para mantener temperatura constante entre 20°C y 24°C, y humedad del 30% al 55%.
+                <br>• <strong>Suministro Eléctrico:</strong> Circuitos independientes protegidos por sistemas UPS y un Sistema de Puesta a Tierra dedicado (TMGB).
+              </div>
+              <ul class="text-secondary text-start mt-3 spec-list small">
+                <li><strong>Control de Acceso:</strong> Seguridad física restringida mediante cerraduras mecánicas o biométricas.</li>
+                <li><strong>Iluminación:</strong> Mínimo de 500 lux medidos a 1 metro del suelo para facilitar labores de mantenimiento técnico.</li>
+                <li>Aloja racks estándar de 19 pulgadas provistos de organizadores horizontales y verticales.</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="col-md-6">
         <div class="card card-shadow border-0 rounded-4 overflow-hidden h-100">
-          <img src="img/canalizaciones.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Canalizaciones">
-          <div class="card-body p-4 bg-white">
-            <h3 class="fw-bold text-dark mb-3">Canalizaciones</h3>
-            <p class="text-secondary text-justify">
-              Son ductos, bandejas, tubos o canaletas por donde pasan los cables de red.
-            </p>
-            <p class="text-secondary text-justify">
-              Ayudan a proteger el cableado, mantener el orden y facilitar futuras reparaciones o ampliaciones.
-            </p>
-            <p class="text-secondary text-justify">
-              Pueden ser canaletas, tuberías, bandejas portacables o ductos. Su uso permite separar, proteger y guiar los cables de forma segura dentro de paredes, techos o pisos técnicos.
-            </p>
-            <ul class="text-secondary text-start mt-3">
-              <li>Protegen el cableado físico.</li>
-              <li>Mantienen el orden de instalación.</li>
-              <li>Facilitan ampliaciones futuras.</li>
-              <li>Reducen riesgos de daño.</li>
-            </ul>
+          <img src="img/canalizaciones.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Canalizaciones bandejas portacables">
+          <div class="card-body p-4 bg-white d-flex flex-column justify-content-between">
+            <div>
+              <div class="academic-badge">Sistemas de Confinamiento Físico</div>
+              <h3 class="fw-bold text-dark mb-3">Canalizaciones</h3>
+              <p class="text-secondary text-justify mb-3">
+                Las canalizaciones son las estructuras mecánicas que proveen la ruta, el soporte, el confinamiento y la protección física para los medios de transmisión de telecomunicaciones a lo largo de todo su recorrido por el edificio o campus.
+              </p>
+              <p class="text-secondary text-justify mb-3">
+                Su selección e instalación determinan el radio de curvatura que experimentarán los cables. Un mal diseño de canalización puede aplastar los conductores de cobre o microfracturar los núcleos de sílice en la fibra óptica, induciendo altas pérdidas por inserción.
+              </p>
+            </div>
+            <div>
+              <div class="technical-note">
+                <strong>Tipologías Estándar de Contención:</strong>
+                <br>• <strong>Bandejas Portacables (Tipo Escalera/Malla):</strong> Ideales para techos falsos de pasillos con alta densidad de cables.
+                <br>• <strong>Tuberías EMT (Conduit):</strong> Utilizadas en paredes o zonas expuestas; proveen excelente blindaje electromagnético.
+                <br>• <strong>Pisos Técnicos / Canaletas:</strong> Distribución bajo piso o superficial en oficinas modulares.
+              </div>
+              <ul class="text-secondary text-start mt-3 spec-list small">
+                <li><strong>Regla de Llenado Máximo:</strong> No debe exceder el 40% de la capacidad de la sección transversal en el diseño inicial para permitir futuras expansiones (40% de llenado visual equivale a un 60% de espacio de aire residual).</li>
+                <li>Debe cumplir rigurosamente con los radios de curvatura mínimos (típicamente 4 veces el diámetro exterior del cable para cobre).</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
       
     </section>
-<div class="row mb-5 justify-content-center">
+
+    <div class="row mb-5 justify-content-center">
       <div class="col-lg-10">
         <div class="card card-shadow border-0 rounded-4 p-4 p-lg-5">
           <div class="card-body">
-            <h2 class="fw-bold text-primary mb-4 text-center">¿Por qué son importantes estos elementos?</h2>
+            <h2 class="fw-bold text-primary mb-4 text-center">Importancia de una Infraestructura Homologada</h2>
             <p class="fs-5 text-secondary text-justify mb-4">
-              Los elementos del cableado estructurado permiten que una red funcione de manera organizada, segura y eficiente. Gracias a estos componentes, las empresas pueden transmitir información rápidamente y mantener una comunicación estable entre dispositivos.
+              Un sistema de cableado estructurado mal ejecutado es responsable de hasta el 70% de las caídas de red y pérdidas de paquetes en entornos corporativos. Invertir en una infraestructura estandarizada genera dividendos privados inmediatos:
             </p>
             
             <div class="row justify-content-center mt-4">
-              <div class="col-md-8">
-                <ul class="text-secondary fs-5 text-start">
-                  <li class="mb-2">Facilitan la organización del cableado.</li>
-                  <li class="mb-2">Mejoran el rendimiento de la red.</li>
-                  <li class="mb-2">Reducen fallos y pérdidas de conexión.</li>
-                  <li class="mb-2">Facilitan futuras ampliaciones y mantenimiento.</li>
-                  <li class="mb-2">Permiten mayor seguridad y estabilidad.</li>
+              <div class="col-md-10">
+                <ul class="text-secondary fs-6 text-start spec-list">
+                  <li class="mb-3"><strong>Flexibilidad Arquitectónica:</strong> Desvincular la planta física de los dispositivos activos permite migrar de Ethernet a tecnologías PoE o telefonía IP sin modificar los tendidos de cable en paredes.</li>
+                  <li class="mb-3"><strong>Aislamiento Rápido de Averías:</strong> Al estructurarse de forma jerárquica y modular a través de Patch Panels, los técnicos pueden realizar pruebas de de reflectometría (OTDR) o certificación de cables (Fluke) en puntos aislados sin detener el resto de la red corporativa.</li>
+                  <li class="mb-3"><strong>Conformidad con Normas de Seguridad contra Incendios:</strong> Obliga al uso de chaquetas con clasificaciones de seguridad específicas como *CM, CMR (Riser)* o *CMP (Plenum)*, las cuales son autoextinguibles y no propagan gases altamente tóxicos (halógenos) al quemarse en ductos de ventilación.</li>
+                  <li class="mb-3"><strong>Administración bajo Norma TIA-606:</strong> Implementa esquemas de etiquetado alfanumérico unificado y códigos de colores obligatorios para cada punto de red, eliminando las conjeturas durante auditorías o reconfiguraciones.</li>
                 </ul>
               </div>
             </div>
@@ -192,41 +268,50 @@
     <section class="row mt-5 text-center mb-5">
       <div class="col-md-4 mb-4">
         <div class="card card-shadow border-0 rounded-4 h-100 p-4">
-          <h2 class="fw-bold text-primary display-5">90%</h2>
-          <p class="text-secondary mb-0">de las empresas utilizan cableado estructurado.</p>
+          <h2 class="fw-bold text-primary display-5">70%</h2>
+          <p class="text-secondary mb-0 fw-semibold">de las fallas de red</p>
+          <p class="text-muted small">son causadas por deficiencias o mala calidad en la capa física del cableado.</p>
         </div>
       </div>
       <div class="col-md-4 mb-4">
         <div class="card card-shadow border-0 rounded-4 h-100 p-4">
-          <h2 class="fw-bold text-primary display-5">24/7</h2>
-          <p class="text-secondary mb-0">conectividad continua en redes modernas.</p>
+          <h2 class="fw-bold text-primary display-5">15+ Años</h2>
+          <p class="text-secondary mb-0 fw-semibold">Ciclo de vida operativo</p>
+          <p class="text-muted small">garantizado al certificar canales bajo las directrices estrictas de ANSI/TIA.</p>
         </div>
       </div>
       <div class="col-md-4 mb-4">
         <div class="card card-shadow border-0 rounded-4 h-100 p-4">
-          <h2 class="fw-bold text-primary display-5">+1Gbps</h2>
-          <p class="text-secondary mb-0">velocidad soportada por redes actuales.</p>
+          <h2 class="fw-bold text-primary display-5">40% Máx.</h2>
+          <p class="text-secondary mb-0 fw-semibold">Factor de Llenado Inicial</p>
+          <p class="text-muted small">permitido en ductos para mitigar el aplastamiento de cables y asegurar escalabilidad.</p>
         </div>
       </div>
     </section>
 
-    <section class="row mt-4 mb-5">
-      <div class="col-md-4 mb-4">
-        <div class="card card-shadow border-0 rounded-4 h-100 p-4 text-center">
-          <h4 class="fw-bold text-dark mb-3">Velocidad</h4>
-          <p class="text-secondary mb-0">Permiten transmisión rápida y estable de datos.</p>
+    <section class="row g-4 mt-4 mb-5 text-center">
+      <div class="col-md-4">
+        <div class="pilar-card">
+          <h4 class="fw-bold text-dark mb-3">Rendimiento Lineal</h4>
+          <p class="text-secondary small text-justify">
+            Garantiza anchos de banda simétricos estables y tasas de error de bits (BER) mínimas al mantener la atenuación y la diafonía bajo parámetros estrictos de laboratorio.
+          </p>
         </div>
       </div>
-      <div class="col-md-4 mb-4">
-        <div class="card card-shadow border-0 rounded-4 h-100 p-4 text-center">
-          <h4 class="fw-bold text-dark mb-3">Seguridad</h4>
-          <p class="text-secondary mb-0">Protegen la infraestructura física de la red.</p>
+      <div class="col-md-4">
+        <div class="pilar-card">
+          <h4 class="fw-bold text-dark mb-3">Seguridad y Blindaje</h4>
+          <p class="text-secondary small text-justify">
+            Aislamiento físico y electromagnético integral. El uso correcto de puestas a tierra absorbe corrientes parásitas y transitorios, protegiendo tanto al personal como al hardware activo de la red.
+          </p>
         </div>
       </div>
-      <div class="col-md-4 mb-4">
-        <div class="card card-shadow border-0 rounded-4 h-100 p-4 text-center">
-          <h4 class="fw-bold text-dark mb-3">Conectividad</h4>
-          <p class="text-secondary mb-0">Facilitan la comunicación entre dispositivos.</p>
+      <div class="col-md-4">
+        <div class="pilar-card">
+          <h4 class="fw-bold text-dark mb-3">Escalabilidad Modular</h4>
+          <p class="text-secondary small text-justify">
+            Diseñado estructuralmente para admitir hardware y velocidades de generaciones futuras (como la transición hacia enlaces de 10G, 40G o superiores) sin necesidad de perforar paredes o realizar nuevos tendidos troncales.
+          </p>
         </div>
       </div>
     </section>
@@ -235,9 +320,9 @@
       <div class="col-12">
         <div class="card card-shadow border-0 rounded-4 p-4">
           <div class="card-body">
-            <h2 class="fw-bold text-primary mb-4 text-center">Conclusión</h2>
+            <h2 class="fw-bold text-primary mb-4 text-center">Conclusión de Infraestructura Física</h2>
             <p class="text-secondary fs-5 text-justify mb-0">
-              El cableado estructurado constituye la base física de las redes modernas. Gracias a estos elementos es posible garantizar una comunicación eficiente, organizada y segura entre diferentes dispositivos y sistemas.
+              Los elementos del cableado estructurado no deben tratarse como simples accesorios de conexión pasiva; constituyen el cimiento físico del Modelo OSI. Un entendimiento profundo de sus parámetros matemáticos de diseño, distancias límites y normativas de confinamiento es el único camino seguro para proyectar e implementar redes corporativas estables de alta disponibilidad, capaces de procesar los flujos de datos modernos de manera íntegra y síncrona.
             </p>
           </div>
         </div>

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tutor Web - Tecnología</title>
+  <title>Tutor Web - Medios de Transmisión Avanzados y Hardware de Conmutación</title>
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
 
@@ -14,7 +14,6 @@
       font-family: system-ui, -apple-system, sans-serif;
     }
 
-    /* Tu color oscuro personalizado */
     .bg-dark-custom {
       background-color: #0f172a;
     }
@@ -22,7 +21,19 @@
     .titulo-seccion {
       color: #0f172a;
       font-weight: bold;
-      margin-bottom: 30px;
+      margin-top: 60px;
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .titulo-seccion::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background-color: #0d6efd;
+      margin: 12px auto 0 auto;
+      border-radius: 2px;
     }
 
     .card-custom {
@@ -33,19 +44,11 @@
       box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
       background: white;
       height: 100%;
-      padding-bottom: 10px;
-    }
-
-    .card-body {
-      padding: 35px;
     }
 
     .card-body p {
-      margin-top: 18px;
-      line-height: 1.9;
-      color: #333;
-      padding-right: 5px;
-      padding-left: 5px;
+      line-height: 1.8;
+      color: #334155;
     }
 
     .card-custom:hover {
@@ -54,26 +57,24 @@
 
     .card-custom img {
       width: 100%;
-      height: 250px;
+      height: 280px;
       object-fit: cover;
-      object-position: center;
-      display: block;
     }
 
     .info-box {
       background: white;
       border-radius: 22px;
-      padding: 30px;
+      padding: 40px;
       box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
       height: 100%;
     }
 
     .info-box img {
       width: 100%;
-      height: 250px;
+      height: 280px;
       object-fit: cover;
-      object-position: center;
       border-radius: 15px;
+      margin-bottom: 25px;
     }
 
     .table-custom {
@@ -81,34 +82,41 @@
       border-radius: 22px;
       padding: 35px;
       box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
-      border: 1px solid #dbe4ff;
     }
 
     .badge-custom {
       background-color: #0d6efd;
       padding: 8px 15px;
       border-radius: 30px;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: white;
       display: inline-block;
       margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
     .price {
       color: #0d6efd;
       font-weight: bold;
-      font-size: 1.1rem;
+      font-size: 1.25rem;
+      background-color: #eff6ff;
+      padding: 6px 14px;
+      border-radius: 8px;
+      display: inline-block;
     }
 
     .top-card {
       background: white;
       border-radius: 22px;
-      padding: 25px;
-      text-align: center;
+      padding: 30px;
       box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
       transition: 0.3s;
       width: 100%;
       height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .top-card:hover {
@@ -117,29 +125,42 @@
 
     .top-card img {
       width: 100%;
-      height: 180px;
-      object-fit: contain;
-      object-position: center;
-      display: block;
-      margin: auto;
+      height: 130px;
+      object-fit: contain; /* Cambiado a contain para que los logos no se corten */
+      background-color: #f8f9fa;
+      padding: 10px;
+    }
+
+    .academic-note {
+      background-color: #eff6ff;
+      border-left: 5px solid #2563eb;
+      padding: 18px;
+      border-radius: 0 12px 12px 0;
+      margin-top: 15px;
+      font-size: 0.95rem;
+      color: #1e40af;
+    }
+
+    .tech-spec-list li {
+      margin-bottom: 8px;
+      font-size: 0.93rem;
     }
 
     footer {
       background-color: #0f172a;
       color: white;
-      padding: 25px;
-      margin-top: 60px;
+      padding: 40px;
+      margin-top: 90px;
       text-align: center;
     }
   </style>
-
 </head>
 
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark-custom shadow-sm py-3">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">Tutor Web</a>
+      <a class="navbar-brand fw-bold" href="index.html">Tutor Redes e Infraestructura</a>
       <div class="d-flex ms-auto">
         <ul class="navbar-nav flex-row gap-4">
           <li class="nav-item"><a class="nav-link text-white-50" href="index.html">Inicio</a></li>
@@ -154,335 +175,437 @@
 
   <div class="container my-5">
     <div class="bg-dark-custom text-white p-5 rounded-4 shadow-sm text-center">
-      <h1 class="display-4 fw-bold mb-3">Tecnología de Redes</h1>
-      <p class="fs-5 text-white-75 px-lg-5">
-        Tipos de cableado y dispositivos utilizados en redes modernas.
+      <span class="badge bg-primary px-3 py-2 mb-3 text-uppercase fw-semibold" style="letter-spacing: 1px;">Ingeniería de Redes - Capa Física y Enlace</span>
+      <h1 class="display-5 fw-bold mb-3">Especificación Técnica de Medios y Hardware</h1>
+      <p class="fs-5 text-white-75 px-lg-5 max-w-3xl mx-auto">
+        Tutor exhaustivo enfocado en los parámetros mecánicos, electromagnéticos y ópticos de las guías de onda, así como el rendimiento síncrono del hardware de interconexión.
       </p>
     </div>
   </div>
 
   <div class="container my-5">
-    <h2 class="titulo-seccion text-center">
-      Tipos de Cable y Velocidad según la Categoría
-    </h2>
+    <h2 class="titulo-seccion text-center">Análisis de Medios de Transmisión Guiados</h2>
+    <p class="text-center text-muted mb-5 px-md-5">Estudio de los canales físicos y los factores limitantes de la transmisión de datos, tales como la atenuación, la impedancia característica y las pérdidas por retorno.</p>
+    
     <div class="row g-4">
-      <div class="col-md-6">
+      <div class="col-lg-6">
         <div class="card-custom">
-          <img src="img/utp.jpg" alt="Cable UTP">
-          <div class="p-5 px-5 pb-4">
-            <span class="badge-custom">
-              Cable UTP
-            </span>
-            <h3 class="text-primary fw-bold">
-              Cable de Par Trenzado
-            </h3>
-            <p>
-              Cable utilizado en redes LAN por su facilidad de instalación y bajo costo.
+          <img src="img/utp.jpg" alt="Estructura e hilos de cobre de cables de red Ethernet">
+          <div class="p-5">
+            <span class="badge-custom">Infraestructura de Cobre</span>
+            <h3 class="text-primary fw-bold mb-3">Cables de Par Trenzado</h3>
+            <p class="text-justify">
+              Formado por conductores de cobre multifilar o sólido aislados por una capa de polietileno de alta densidad. El trenzado helicoidal balancea las líneas físicas de transmisión; los hilos transportan voltajes de igual magnitud pero polaridad opuesta. Este diseño aprovecha el principio de <strong>cancelación electromagnética</strong> para anular el ruido radiado y mitigar la <strong>diafonía (crosstalk)</strong>, medida técnicamente mediante parámetros como NEXT (Near-End Crosstalk) y FEXT (Far-End Crosstalk).
             </p>
-            <ul>
-              <li>Conector RJ-45</li>
-              <li>Hasta 10 Gbps</li>
-              <li>Uso doméstico y empresarial</li>
+            
+            <h5 class="fw-bold text-secondary mt-4">Características Físicas y Eléctricas:</h5>
+            <ul class="tech-spec-list text-muted ps-3">
+              <li><strong>Impedancia Característica:</strong> Estándar de 100 Ohmios (±15%) constante a lo largo de las frecuencias operativas del cable.</li>
+              <li><strong>Calibre del Conductor:</strong> Medido bajo la norma AWG (American Wire Gauge), típicamente entre 22 AWG y 24 AWG. A menor número AWG, mayor grosor del hilo de cobre y menor resistencia óhmica.</li>
+              <li><strong>Esquemas de Blindaje Estructurado:</strong> 
+                <br>• <em>U/UTP:</em> Par trenzado totalmente sin blindaje; flexible pero vulnerable a EMI externa.
+                <br>• <em>F/UTP:</em> Blindaje global de lámina de aluminio que envuelve los 4 pares; reduce la interferencia externa (Alien Crosstalk).
+                <br>• <em>S/FTP:</em> Blindaje trenzado de cobre exterior y blindaje de aluminio independiente para cada par; máxima protección para altas frecuencias.
+              </li>
+              <li><strong>Geometría de Conectorización:</strong> Interfaces estandarizadas RJ-45 que requieren el mantenimiento estricto del destrenzado por debajo de los 13 mm en la terminación para no degradar la categoría del canal.</li>
             </ul>
+
+            <div class="academic-note">
+              <strong>Estándar de Conectorización ANSI/TIA-568:</strong> 
+              <br>• <strong>T568A:</strong> Pinout ordenado por: Blanco/Verde, Verde, Blanco/Naranja, Azul, Blanco/Azul, Naranja, Blanco/Marrón, Marrón.
+              <br>• <strong>T568B:</strong> Pinout ordenado por: Blanco/Naranja, Naranja, Blanco/Verde, Azul, Blanco/Azul, Verde, Blanco/Marrón, Marrón.
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-md-6">
+
+      <div class="col-lg-6">
         <div class="card-custom">
-          <img src="img/fibra.jpg" alt="Fibra Optica">
-          <div class="p-5 px-5 pb-4">
-            <span class="badge-custom">
-              Fibra Óptica
-            </span>
-            <h3 class="text-primary fw-bold">
-              Transmisión por Luz
-            </h3>
-            <p>
-              Medio de transmisión de alta velocidad y gran estabilidad.
+          <img src="img/fibra.jpg" alt="Hilos y filamentos de fibra óptica iluminados por luz láser">
+          <div class="p-5">
+            <span class="badge-custom">Guías de Onda Ópticas</span>
+            <h3 class="text-primary fw-bold mb-3">Medios de Fibra Óptica</h3>
+            <p class="text-justify">
+              Tecnología basada en la propagación de ondas electromagnéticas en el espectro infrarrojo (longitudes de onda de 850 nm a 1550 nm). Consiste en un filamento de vidrio de sílice puro donde la luz queda confinada gracias a la <strong>Ley de Snell</strong> y el fenómeno de la <strong>Reflexión Interna Total</strong>. Al no utilizar flujos de electrones, no genera bucles de tierra, es inmune a las descargas atmosféricas y ofrece aislamiento eléctrico completo.
             </p>
-            <ul>
-              <li>Más de 100 Gbps</li>
-              <li>Mayor seguridad</li>
-              <li>Ideal para backbone</li>
+            
+            <h5 class="fw-bold text-secondary mt-4">Características Ópticas y Estructurales:</h5>
+            <ul class="tech-spec-list text-muted ps-3">
+              <li><strong>Atenuación Lineal Mínima:</strong> Pérdidas extremadamente bajas medidas en Decibelios por Kilómetro (dB/km). En fibra monomodo a 1550 nm, la atenuación puede descender hasta 0.2 dB/km, permitiendo tramos kilométricos sin repetidores.</li>
+              <li><strong>Ventanas de Transmisión:</strong> Regiones ópticas optimizadas donde el vidrio presenta menor absorción: 1° Ventana (850 nm), 2° Ventana (1310 nm) y 3° Ventana (1550 nm).</li>
+              <li><strong>Fibra Monomodo (SMF - Single Mode Fiber):</strong> Diámetro del núcleo de ~9 micrones. Permite la propagación de un único modo de luz lineal. Elimina por completo la <em>dispersión modal</em>, lo que la convierte en la opción estándar para redes WAN y telecomunicaciones transoceánicas.</li>
+              <li><strong>Fibra Multimodo (MMF - Multi Mode Fiber):</strong> Diámetro del núcleo de 50 o 62.5 micrones. Permite que múltiples rayos de luz viajen rebotando en diferentes ángulos. Limitada por la dispersión modal a distancias cortas (redes LAN, Edificios, Data Centers). Se clasifica en índices OM1, OM2, OM3, OM4 y OM5 basados en su ancho de banda modal.</li>
             </ul>
+
+            <div class="academic-note">
+              <strong>Tipos de Pulido en Conectores (Pérdidas por Retorno):</strong>
+              <br>• <strong>UPC (Ultra Physical Contact - Azul):</strong> Pulido plano. Pérdida por retorno de ≈ -50 dB. Utilizado en sistemas de datos estándar.
+              <br>• <strong>APC (Angled Physical Contact - Verde):</strong> Pulido con un ángulo de 8°. Desvía las reflexiones hacia la cubierta. Pérdida por retorno de ≈ -60 dB. Crítico en conexiones GPON y video analógico.
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <div class="mt-5">
-      <div class="table-custom px-5 py-5 text-center">
-        <h3 class="text-primary fw-bold mb-4">
-          Comparativa de Categorías de Red
-        </h3>
-        <table class="table align-middle border border-primary mx-auto" style="width: 75%;">
-          <thead class="table-primary">
-            <tr>
-              <th class="py-3 border border-primary text-center">Categoría</th>
-              <th class="py-3 border border-primary text-center">Velocidad</th>
-              <th class="py-3 border border-primary text-center">Frecuencia</th>
-              <th class="py-3 border border-primary text-center">Uso</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="py-3 border border-primary">Cat5e</td>
-              <td class="py-3 border border-primary">1 Gbps</td>
-              <td class="py-3 border border-primary">100 MHz</td>
-              <td class="py-3 border border-primary">Hogares</td>
-            </tr>
-            <tr>
-              <td class="py-3 border border-primary">Cat6</td>
-              <td class="py-3 border border-primary">10 Gbps</td>
-              <td class="py-3 border border-primary">250 MHz</td>
-              <td class="py-3 border border-primary">Empresas</td>
-            </tr>
-            <tr>
-              <td class="py-3 border border-primary">Cat6a</td>
-              <td class="py-3 border border-primary">10 Gbps</td>
-              <td class="py-3 border border-primary">500 MHz</td>
-              <td class="py-3 border border-primary">Centros de datos</td>
-            </tr>
-            <tr>
-              <td class="py-3 border border-primary">Fibra Óptica</td>
-              <td class="py-3 border border-primary">100+ Gbps</td>
-              <td class="py-3 border border-primary">Muy Alta</td>
-              <td class="py-3 border border-primary">Backbone</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-
-  <div class="container my-5">
-    <h2 class="titulo-seccion text-center">
-      Dispositivos Alámbricos
-    </h2>
-    <div class="row g-4">
-      <div class="col-md-6">
-        <div class="info-box">
-          <img src="img/router.jpg" alt="Router">
-          <h3 class="text-primary fw-bold mt-3">
-            Router
-          </h3>
-          <p>
-            Conecta diferentes redes y administra el tráfico de datos.
-          </p>
-          <ul>
-            <li>Firewall integrado</li>
-            <li>Alta estabilidad</li>
-            <li>Control de tráfico</li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="info-box">
-          <img src="img/switch.jpg" alt="Switch">
-          <h3 class="text-primary fw-bold mt-3">
-            Switch
-          </h3>
-          <p>
-            Permite conectar varios dispositivos dentro de una red local.
-          </p>
-          <ul>
-            <li>Alta velocidad</li>
-            <li>Reduce colisiones</li>
-            <li>Optimiza tráfico</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="mt-5">
-      <h3 class="text-center fw-bold text-primary mb-4">
-        Top 5 Dispositivos Alámbricos
-      </h3>
-      <div class="row justify-content-center g-4">
-        <div class="col-md-4 d-flex">
-          <div class="top-card">
-            <img src="img/cisco.png" alt="Cisco">
-            <h4 class="fw-bold mt-3">
-              Cisco Catalyst
-            </h4>
-            <p>
-              Switch empresarial de alto rendimiento.
-            </p>
-            <p class="price">
-              $450 USD
-            </p>
-          </div>
-        </div>
-        <div class="col-md-4 d-flex">
-          <div class="top-card">
-            <img src="img/tplink.png" alt="TP-Link">
-            <h4 class="fw-bold mt-3">
-              TP-Link JetStream
-            </h4>
-            <p>
-              Excelente rendimiento para oficinas.
-            </p>
-            <p class="price">
-              $220 USD
-            </p>
-          </div>
-        </div>
-        <div class="col-md-4 d-flex">
-          <div class="top-card">
-            <img src="img/netgear.png" alt="Netgear">
-            <h4 class="fw-bold mt-3">
-              Netgear GS308
-            </h4>
-            <p>
-              Ideal para redes pequeñas.
-            </p>
-            <p class="price">
-              $60 USD
-            </p>
-          </div>
-        </div>
-        <div class="col-md-4 d-flex">
-          <div class="top-card">
-            <img src="img/dlink.jpg" class="img-fluid rounded mb-3 img-top">
-            <h4 class="fw-bold mt-3">D-Link DGS-108</h4>
-            <p>Switch confiable y económico para redes domésticas.</p>
-            <h3 class="price">$65 USD</h3>
-          </div>
-        </div>
-        <div class="col-md-4 d-flex">
-          <div class="top-card">
-            <img src="img/ubiquiti.jpg" class="img-fluid rounded mb-3 img-top">
-            <h4 class="fw-bold mt-3">Ubiquiti EdgeSwitch</h4>
-            <p>Gran capacidad y estabilidad para empresas.</p>
-            <h3 class="price">$390 USD</h3>
-          </div>
+      <div class="table-custom p-4 p-md-5">
+        <h3 class="text-primary fw-bold mb-2 text-center">Matriz Extensa de Especificaciones de Rendimiento</h3>
+        <p class="text-muted text-center mb-4">Tabla de ingeniería comparando anchos de banda, frecuencias operativas, codificación física y distancias límite de diseño.</p>
+        <div class="table-responsive">
+          <table class="table align-middle table-striped table-bordered text-center">
+            <thead class="table-dark">
+              <tr>
+                <th>Categoría / Estándar</th>
+                <th>Frecuencia (Ancho de Banda)</th>
+                <th>Velocidad Máxima de Transmisión</th>
+                <th>Distancia de Canal Límite</th>
+                <th>Esquema de Codificación Física</th>
+                <th>Tipo de Blindaje / Conector</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="fw-bold">Cat 5e</td>
+                <td>100 MHz</td>
+                <td>1 Gbps</td>
+                <td>100 Metros</td>
+                <td>4D-PAM5 (Pulse Amplitude Modulation)</td>
+                <td>U/UTP — Conector RJ-45</td>
+              </tr>
+              <tr>
+                <td class="fw-bold">Cat 6</td>
+                <td>250 MHz</td>
+                <td>10 Gbps</td>
+                <td>55 Metros (a 10 Gbps) / 100m (a 1 Gbps)</td>
+                <td>PAM-16 (16 niveles de modulación)</td>
+                <td>U/UTP o F/UTP (Incluye divisor interno)</td>
+              </tr>
+              <tr>
+                <td class="fw-bold">Cat 6a</td>
+                <td>500 MHz</td>
+                <td>10 Gbps</td>
+                <td>100 Metros</td>
+                <td>DSQ128 (Double Square 128)</td>
+                <td>F/UTP o S/FTP — Conector RJ-45 blindado</td>
+              </tr>
+              <tr>
+                <td class="fw-bold">Cat 7</td>
+                <td>600 MHz</td>
+                <td>10 Gbps</td>
+                <td>100 Metros</td>
+                <td>Codificación exclusiva Ethernet</td>
+                <td>S/FTP — Conector GG45 / TERA</td>
+              </tr>
+              <tr>
+                <td class="fw-bold">Cat 8.1 / 8.2</td>
+                <td>2000 MHz</td>
+                <td>25 Gbps / 40 Gbps</td>
+                <td>30 Metros (Canal Corto para Data Centers)</td>
+                <td>PAM-16 sobre frecuencias de GHz</td>
+                <td>S/FTP — RJ-45 (8.1) o TERA/GG45 (8.2)</td>
+              </tr>
+              <tr>
+                <td class="fw-bold">Fibra OM4 (Multimodo)</td>
+                <td>4700 MHz·km (Ancho de Banda Modal)</td>
+                <td>40 Gbps / 100 Gbps</td>
+                <td>150 Metros / 100 Metros</td>
+                <td>NRZ / PAM-4 mediante VCSEL Láser</td>
+                <td>Núcleo 50/125 µm — Conectores LC / MPO</td>
+              </tr>
+              <tr>
+                <td class="fw-bold">Fibra OS2 (Monomodo)</td>
+                <td>Ilimitado (Sujeto solo a dispersión cromática)</td>
+                <td>> 400 Gbps (Multiplexación WDM)</td>
+                <td>Hasta 40 Kilómetros (Sin amplificación)</td>
+                <td>QAM / Coherent Modulation Avanzada</td>
+                <td>Núcleo 9/125 µm — Conectores SC / LC (UPC/APC)</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
   </div>
 
   <div class="container my-5">
-    <h2 class="titulo-seccion text-center">
-      Dispositivos Inalámbricos
-    </h2>
+    <h2 class="titulo-seccion text-center">Dispositivos de Conectividad e Infraestructura Alámbrica</h2>
+    <p class="text-center text-muted mb-5">Explicación matemática y functional del hardware que procesa y conmuta el flujo de datos en las capas superiores.</p>
+    
     <div class="row g-4">
-      <div class="col-md-6">
+      <div class="col-lg-6">
         <div class="info-box">
-          <img src="img/accesspoint.jpg" alt="Access Point">
-          <h3 class="text-primary fw-bold mt-3">
-            Access Point
-          </h3>
-          <p>
-            Distribuye señal Wi-Fi en redes inalámbricas.
+          <img src="img/router.jpg" alt="Equipos de enrutamiento y servidores montados en un rack de centro de datos">
+          <span class="badge bg-danger mb-2">Capa 3: Red del Modelo OSI</span>
+          <h3 class="text-primary fw-bold">Enrutador (Router Architectural Process)</h3>
+          <p class="text-justify">
+            Dispositivo encargado de determinar el camino más corto o eficiente para reenviar paquetes IP hacia redes remotas. Utiliza el *Plano de Control* para construir las tablas de enrutamiento mediante protocolos dinámicos (como OSPF basado en el algoritmo de Dijkstra, o BGP), y el *Plano de Datos* para la conmutación rápida de paquetes desde una interfaz de entrada a una de salida.
           </p>
-          <ul>
-            <li>Mayor cobertura</li>
-            <li>Conexión estable</li>
-            <li>Múltiples dispositivos</li>
+          <h6 class="fw-bold text-dark mt-3">Características y Funciones Críticas:</h6>
+          <ul class="tech-spec-list text-muted ps-3">
+            <li><strong>Aislamiento de Dominios de Broadcast:</strong> A diferencia de los switches, los routers bloquean los paquetes dirigidos a direcciones de difusión general (ej. 255.255.255.255), evitando las tormentas de transmisión.</li>
+            <li><strong>Inspección Lógica de Cabeceras:</strong> Desencapsula la trama de Capa 2 para verificar los campos de la cabecera de Capa 3, tales como el TTL (Time to Live) y la dirección IP de destino.</li>
+            <li><strong>Procesamiento Avanzado WAN:</strong> Administra mecanismos de traducción de direcciones (NAT/PAT), políticas de túneles seguros (VPN IPsec/GRE) y priorización de tráfico mediante Calidad de Servicio (QoS/DiffServ).</li>
           </ul>
         </div>
       </div>
-      <div class="col-md-6">
+
+      <div class="col-lg-6">
         <div class="info-box">
-          <img src="img/repetidor.jpg" alt="Repetidor">
-          <h3 class="text-primary fw-bold mt-3">
-            Repetidor Wi-Fi
-          </h3>
-          <p>
-            Amplía la cobertura inalámbrica en zonas alejadas.
+          <img src="img/switch.jpg" alt="Cables Ethernet conectados a los puertos de un Switch con luces parpadeando">
+          <span class="badge bg-success mb-2">Capa 2: Enlace de Datos</span>
+          <h3 class="text-primary fw-bold">Conmutador (Switching Line-Rate Process)</h3>
+          <p class="text-justify">
+            Equipo diseñado para interconectar nodos dentro de una misma red local (LAN). Su ventaja radica en que conmuta tramas a velocidad de cable (Line-Rate) gracias al uso de hardware especializado denominado *ASIC (Application-Specific Integrated Circuit)*. Esto descarga al procesador principal del equipo, realizando conmutaciones en nanosegundos.
           </p>
-          <ul>
-            <li>Reduce zonas muertas</li>
-            <li>Fácil instalación</li>
-            <li>Mayor alcance</li>
+          <h6 class="fw-bold text-dark mt-3">Características y Funciones Críticas:</h6>
+          <ul class="tech-spec-list text-muted ps-3">
+            <li><strong>Administración de la Tabla CAM:</strong> Almacena activamente las direcciones MAC de los dispositivos origen asociados a cada puerto físico mediante la inspección del tráfico entrante.</li>
+            <li><strong>Microsegmentación de Colisiones:</strong> Cada puerto del conmutador representa un dominio de colisión independiente, permitiendo enlaces síncronos *Full-Duplex* donde el canal de transmisión y recepción están separados físicamente.</li>
+            <li><strong>Soporte de VLANs (IEEE 802.1Q):</strong> Segmenta lógicamente una infraestructura física común en múltiples redes virtuales independientes, insertando un tag de 4 bytes en la trama Ethernet original.</li>
           </ul>
         </div>
       </div>
     </div>
 
     <div class="mt-5">
-      <h3 class="text-center fw-bold text-primary mb-4">
-        Top 5 Dispositivos Inalámbricos
-      </h3>
-      <div class="row justify-content-center g-4">
+      <h3 class="text-center fw-bold text-primary mb-4">Top 5 Dispositivos Alámbricos Empresariales</h3>
+      <div class="row g-4">
+        
         <div class="col-md-4 d-flex">
           <div class="top-card">
-            <img src="img/unifi.png" alt="UniFi">
-            <h4 class="fw-bold mt-3">
-              Ubiquiti UniFi
-            </h4>
-            <p>
-              Excelente cobertura y administración.
-            </p>
-            <p class="price">
-              $210 USD
-            </p>
+            <img src="img/cisco.png" alt="Logo/Equipo Cisco" class="rounded mb-3">
+            <div>
+              <span class="badge bg-secondary mb-2">Puesto 1 — Core/Distribución</span>
+              <h5 class="fw-bold text-dark mb-1">Cisco Catalyst 9200-24T</h5>
+              <p class="text-muted small text-uppercase mb-3">Switch Capa 3 Administrable</p>
+              <ul class="tech-spec-list text-muted ps-3 small text-start">
+                <li><strong>Capacidad de Conmutación:</strong> 128 Gbps de ancho de banda interno.</li>
+                <li><strong>Tasa de Reenvío:</strong> Procesa hasta 95.23 Mpps.</li>
+                <li><strong>Apilamiento Físico:</strong> Tecnología StackWise-160 (hasta 8 equipos).</li>
+                <li><strong>Alimentación:</strong> Doble fuente redundante Hot-Swappable.</li>
+              </ul>
+            </div>
+            <div class="text-center mt-3"><span class="price">$1,450 USD</span></div>
           </div>
         </div>
+
         <div class="col-md-4 d-flex">
           <div class="top-card">
-            <img src="img/asus.png" alt="ASUS">
-            <h4 class="fw-bold mt-3">
-              ASUS RT-AX82U
-            </h4>
-            <p>
-              Router gamer Wi-Fi 6.
-            </p>
-            <p class="price">
-              $320 USD
-            </p>
+            <img src="img/ubiquiti.jpg" alt="Equipo Ubiquiti" class="rounded mb-3">
+            <div>
+              <span class="badge bg-secondary mb-2">Puesto 2 — Routing de Borde</span>
+              <h5 class="fw-bold text-dark mb-1">Ubiquiti EdgeRouter 12</h5>
+              <p class="text-muted small text-uppercase mb-3">Enrutador de Alto Rendimiento</p>
+              <ul class="tech-spec-list text-muted ps-3 small text-start">
+                <li><strong>Capacidad:</strong> Hasta 3.4 Millones de pps (tramas de 64 bytes).</li>
+                <li><strong>Interfaces Físicas:</strong> 10 puertos Gigabit RJ-45 y 2 SFP para fibra.</li>
+                <li><strong>Arquitectura:</strong> Procesador MIPS64 de 4 núcleos a 1 GHz.</li>
+                <li><strong>Energía:</strong> Soporta PoE pasivo de 24V de entrada/salida.</li>
+              </ul>
+            </div>
+            <div class="text-center mt-3"><span class="price">$280 USD</span></div>
           </div>
         </div>
+
         <div class="col-md-4 d-flex">
           <div class="top-card">
-            <img src="img/tenda.png" alt="Tenda">
-            <h4 class="fw-bold mt-3">
-              Tenda Nova
-            </h4>
-            <p>
-              Sistema Mesh moderno.
-            </p>
-            <p class="price">
-              $160 USD
-            </p>
+            <img src="img/tplink.png" alt="Equipo TP-Link" class="rounded mb-3">
+            <div>
+              <span class="badge bg-secondary mb-2">Puesto 3 — Acceso Corporativo</span>
+              <h5 class="fw-bold text-dark mb-1">TP-Link JetStream TL-SG3428X</h5>
+              <p class="text-muted small text-uppercase mb-3">Switch Capa 2+ Administrable</p>
+              <ul class="tech-spec-list text-muted ps-3 small text-start">
+                <li><strong>Puertos:</strong> 24 puertos Gigabit y 4 ranuras SFP+ de 10 Gbps.</li>
+                <li><strong>Backplane:</strong> Matriz de conmutación interna de 128 Gbps.</li>
+                <li><strong>Gestión Centralizada:</strong> Integración al ecosistema Omada SDN.</li>
+                <li><strong>Seguridad:</strong> ACL (L2/L4), IP-MAC-Port Binding y defensa DoS.</li>
+              </ul>
+            </div>
+            <div class="text-center mt-3"><span class="price">$340 USD</span></div>
           </div>
         </div>
+
+        <div class="col-md-4 mx-auto d-flex">
+          <div class="top-card">
+            <img src="img/netgear.png" alt="Equipo Netgear" class="rounded mb-3">
+            <div>
+              <span class="badge bg-secondary mb-2">Puesto 4 — SOHO / Redes Pequeñas</span>
+              <h5 class="fw-bold text-dark mb-1">Netgear GS308</h5>
+              <p class="text-muted small text-uppercase mb-3">Switch SOHO No Administrable</p>
+              <ul class="tech-spec-list text-muted ps-3 small text-start">
+                <li><strong>Conectividad:</strong> 8 puertos RJ-45 10/100/1000 Mbps MDI/MDIX.</li>
+                <li><strong>Arquitectura:</strong> Diseño Fanless (sin ventilador) 100% silencioso.</li>
+                <li><strong>Eficiencia:</strong> Cumple norma de ahorro IEEE 802.3az.</li>
+                <li><strong>Búfer:</strong> 192 KB dinámicos para mitigar pérdida de tramas.</li>
+              </ul>
+            </div>
+            <div class="text-center mt-3"><span class="price">$60 USD</span></div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mx-auto d-flex">
+          <div class="top-card">
+            <img src="img/dlink.jpg" alt="Equipo D-Link" class="rounded mb-3">
+            <div>
+              <span class="badge bg-secondary mb-2">Puesto 5 — Hogar / Oficinas</span>
+              <h5 class="fw-bold text-dark mb-1">D-Link DGS-108</h5>
+              <p class="text-muted small text-uppercase mb-3">Switch de Escritorio Resistente</p>
+              <ul class="tech-spec-list text-muted ps-3 small text-start">
+                <li><strong>Chasis:</strong> Construido en metal para disipación térmica pasiva.</li>
+                <li><strong>Priorización:</strong> Soporta colas de prioridad mediante IEEE 802.1p.</li>
+                <li><strong>Diagnóstico:</strong> LEDs para alertar fallas de continuidad en cables.</li>
+                <li><strong>Tabla MAC:</strong> Capacidad para almacenar hasta 4K de direcciones.</li>
+              </ul>
+            </div>
+            <div class="text-center mt-3"><span class="price">$65 USD</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <h2 class="titulo-seccion text-center">Infraestructura y Dispositivos de Redes Inalámbricas (WLAN)</h2>
+    <p class="text-center text-muted mb-5">Análisis de la propagación de ondas de radiofrecuencia bajo los estándares de la IEEE para redes inalámbricas de alta densidad.</p>
+    
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="info-box">
+          <img src="img/accesspoint.jpg" alt="Dispositivo de punto de acceso corporativo instalado en pared">
+          <span class="badge bg-warning text-dark mb-2">Estándares IEEE 802.11 ax/ac</span>
+          <h3 class="text-primary fw-bold">Punto de Acceso (Access Point)</h3>
+          <p class="text-justify">
+            Dispositivo de hardware que actúa como el puente lógico entre la infraestructura cableada (Capa 802.3 Ethernet) y el medio compartido inalámbrico (Capa 802.11 Wi-Fi). Su función primordial es modular los paquetes digitales en señales analógicas de radiofrecuencia (RF) utilizando técnicas de multiplexación complejas como OFDM u OFDMA.
+          </p>
+          <h6 class="fw-bold text-dark mt-3">Características y Funciones Críticas:</h6>
+          <ul class="tech-spec-list text-muted ps-3">
+            <li><strong>Mapeo Multipolo de SSIDs:</strong> Permite emitir múltiples redes virtuales (SSIDs), asignando cada una a una VLAN (802.1Q) diferente.</li>
+            <li><strong>Gestión de RF Activa:</strong> Control autónomo de canales y potencias (mecanismos RRM) en las frecuencias de 2.4 GHz y 5 GHz.</li>
+            <li><strong>Seguridad Inalámbrica:</strong> Cifrado por hardware robusto WPA3-Enterprise con soporte de servidores RADIUS (802.1X).</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="info-box">
+          <img src="img/repetidor.jpg" alt="Router inalámbrico doméstico con múltiples antenas de transmisión radial">
+          <span class="badge bg-info text-white mb-2">Extensiones de Cobertura y Topologías Mesh</span>
+          <h3 class="text-primary fw-bold">Extensores de Cobertura y Nodos de Malla (Mesh)</h3>
+          <p class="text-justify">
+            Equipos diseñados para expandir el área de cobertura útil de una red inalámbrica. Los extensores tradicionales capturan la señal del AP central y la retransmiten. Sin embargo, sufren de degradación de rendimiento del 50% al operar en modo Half-Duplex sobre el mismo canal de radiofrecuencia (colisiones por tiempo de aire).
+          </p>
+          <h6 class="fw-bold text-dark mt-3">Transición hacia Sistemas de Malla (Mesh):</h6>
+          <p class="text-justify text-muted">
+            Los entornos profesionales modernos sustituyen los repetidores clásicos por arquitecturas Mesh basados en los estándares *IEEE 802.11s. Los nodos Mesh se organizan dinámicamente formando conexiones lógicas directas entre sí, creando una topología de malla inteligente. Utilizan un canal dedicado de retorno de datos (Backhaul Link), unificando la cobertura bajo un único nombre de red SSID y permitiendo transiciones transparentes para el usuario (Roaming* bajo normas IEEE 802.11r/k/v).
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-5">
+      <h3 class="text-center fw-bold text-primary mb-4">Top 5 Dispositivos Inalámbricos Avanzados</h3>
+      <div class="row g-4">
+        
         <div class="col-md-4 d-flex">
           <div class="top-card">
-            <img src="img/starlink.jpg">
-            <h4 class="fw-bold mt-3">
-              Starlink Gen 3
-            </h4>
-            <p>
-              Internet satelital de alta velocidad y baja latencia.
-            </p>
-            <p class="price">
-              $599 USD
-            </p>
+            <img src="img/unifi.png" alt="Equipo Ubiquiti UniFi" class="rounded mb-3">
+            <div>
+              <span class="badge bg-secondary mb-2">Puesto 1 — AP Enterprise</span>
+              <h5 class="fw-bold text-dark mb-1">Ubiquiti UniFi U6 Pro</h5>
+              <p class="text-muted small text-uppercase mb-3">Punto de Acceso Wi-Fi 6 de Alta Densidad</p>
+              <ul class="tech-spec-list text-muted ps-3 small text-start">
+                <li><strong>Throughput Agregado:</strong> Tasa de transferencia inalámbrica de hasta 5.3 Gbps.</li>
+                <li><strong>MIMO:</strong> Matriz 4x4 en la banda de 5 GHz con soporte OFDMA.</li>
+                <li><strong>Capacidad:</strong> Diseñado para sostener más de 350 hosts concurrentes.</li>
+                <li><strong>Alimentación:</strong> Energizado remotamente mediante la norma PoE 802.3at.</li>
+              </ul>
+            </div>
+            <div class="text-center mt-3"><span class="price">$190 USD</span></div>
           </div>
         </div>
+
         <div class="col-md-4 d-flex">
           <div class="top-card">
-            <img src="img/netlife.jpg">
-            <h4 class="fw-bold mt-3">
-              Netlife WiFi 6
-            </h4>
-            <p>
-              Última generación de conectividad inalámbrica para hogares.
-            </p>
-            <p class="price">
-              $120 USD
-            </p>
+            <img src="img/asus.png" alt="Equipo ASUS" class="rounded mb-3">
+            <div>
+              <span class="badge bg-secondary mb-2">Puesto 2 — SOHO Avanzado</span>
+              <h5 class="fw-bold text-dark mb-1">ASUS RT-AX82U</h5>
+              <p class="text-muted small text-uppercase mb-3">Router Inalámbrico Wi-Fi 6</p>
+              <ul class="tech-spec-list text-muted ps-3 small text-start">
+                <li><strong>Velocidades Radiales:</strong> Ancho de banda de canal de hasta 160 MHz (5400 Mbps).</li>
+                <li><strong>Baja Latencia:</strong> Modo gaming por hardware que prioriza puertos LAN.</li>
+                <li><strong>Compatibilidad Mesh:</strong> Soporta la tecnología robusta ASUS AiMesh.</li>
+                <li><strong>Seguridad:</strong> Sistema perimetral integrado AiProtection Pro.</li>
+              </ul>
+            </div>
+            <div class="text-center mt-3"><span class="price">$320 USD</span></div>
           </div>
         </div>
+
+        <div class="col-md-4 d-flex">
+          <div class="top-card">
+            <img src="img/tenda.png" alt="Equipo Tenda" class="rounded mb-3">
+            <div>
+              <span class="badge bg-secondary mb-2">Puesto 3 — Sistema Mesh Residencial</span>
+              <h5 class="fw-bold text-dark mb-1">Tenda Nova MW6 (Pack de 3)</h5>
+              <p class="text-muted small text-uppercase mb-3">Nodos de Malla Autorreparables</p>
+              <ul class="tech-spec-list text-muted ps-3 small text-start">
+                <li><strong>Área de Cobertura:</strong> Hasta 500 metros cuadrados sin zonas muertas.</li>
+                <li><strong>Roaming:</strong> Transiciones automatizadas bajo protocolos 802.11v/r.</li>
+                <li><strong>Topología:</strong> Enlaces internos dinámicos que buscan la ruta al nodo central.</li>
+                <li><strong>Interfaces:</strong> 2 puertos Gigabit Ethernet incorporados en cada cubo.</li>
+              </ul>
+            </div>
+            <div class="text-center mt-3"><span class="price">$160 USD</span></div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mx-auto d-flex">
+          <div class="top-card">
+            <img src="img/starlink.jpg" alt="Kit Starlink" class="rounded mb-3">
+            <div>
+              <span class="badge bg-secondary mb-2">Puesto 4 — Terminal Satelital</span>
+              <h5 class="fw-bold text-dark mb-1">Starlink Gen 3 Standard</h5>
+              <p class="text-muted small text-uppercase mb-3">Kit de Conectividad Satelital LEO</p>
+              <ul class="tech-spec-list text-muted ps-3 small text-start">
+                <li><strong>Antena:</strong> Matriz en fase con ajuste electrónico de campo de visión.</li>
+                <li><strong>Router Acompañante:</strong> Unidad Wi-Fi 6 de triple banda con MIMO incorporado.</li>
+                <li><strong>Rendimiento:</strong> Latencias bajas (25-40 ms) y descargas hasta 220 Mbps.</li>
+                <li><strong>Protección:</strong> Chasis con certificación IP67 frente a climas extremos.</li>
+              </ul>
+            </div>
+            <div class="text-center mt-3"><span class="price">$599 USD</span></div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mx-auto d-flex">
+          <div class="top-card">
+            <img src="img/netlife.jpg" alt="ONT Netlife Huawei" class="rounded mb-3">
+            <div>
+              <span class="badge bg-secondary mb-2">Puesto 5 — Terminal de Suscriptor FTTH</span>
+              <h5 class="fw-bold text-dark mb-1">Huawei OptiXstar (Netlife)</h5>
+              <p class="text-muted small text-uppercase mb-3">ONT Wi-Fi 6 Residencial</p>
+              <ul class="tech-spec-list text-muted ps-3 small text-start">
+                <li><strong>Interfaz Óptica:</strong> Puerto GPON tipo SC/APC directo a la fibra del ISP.</li>
+                <li><strong>Rendimiento:</strong> Wi-Fi 6 optimizado para planes de internet simétricos.</li>
+                <li><strong>Ganancia:</strong> Antenas omnidireccionales con tecnología Beamforming.</li>
+                <li><strong>Puertos:</strong> 4 puertos LAN Gigabit Ethernet para distribución física.</li>
+              </ul>
+            </div>
+            <div class="text-center mt-3"><span class="price">$120 USD</span></div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
 
   <footer>
-    <p class="mb-0 fw-bold">
-      © 2026 Proyecto Tutor Web - Tecnología de Redes
-    </p>
+    <div class="container">
+      <p class="mb-2 fw-bold">Proyecto Académico Tutor Web - Redes y Conectividad</p>
+      <p class="mb-0 text-white-50 small">Desarrollado bajo especificaciones de ingeniería y estándares internacionales TIA/EIA e IEEE — © 2026</p>
+    </div>
   </footer>
 
 </body>

@@ -1,38 +1,98 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tutor Web - Cableado Estructurado</title>
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<style>
-  body {
-    background-color: #f8f9fa;
-    font-family: system-ui, -apple-system, sans-serif;
-  }
-  .bg-dark-custom {
-    background-color: #0f172a;
-  }
-  .text-justify {
-    text-align: justify;
-  }
-  .card-shadow {
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    transition: transform 0.2s ease;
-  }
-  .card-shadow:hover {
-    transform: translateY(-5px);
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutor Web - Cableado Estructurado</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+    .bg-dark-custom {
+      background-color: #0f172a;
+    }
+    .text-justify {
+      text-align: justify;
+    }
+    .card-shadow {
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card-shadow:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    }
+    .academic-badge {
+      background-color: #2563eb;
+      color: white;
+      font-size: 0.75rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 6px 12px;
+      border-radius: 50px;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+    .technical-note {
+      background-color: #eff6ff;
+      border-left: 4px solid #2563eb;
+      padding: 15px;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.9rem;
+      color: #1e40af;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    /* Estilos para el apartado de integrantes */
+    .team-section {
+      background-color: #ffffff;
+      border-radius: 24px;
+      padding: 60px 40px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    }
+    .member-card {
+      background: #f8f9fa;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 30px 25px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+    .member-card:hover {
+      transform: translateY(-5px);
+      background-color: #ffffff;
+      border-color: #2563eb;
+    }
+    .member-avatar {
+      width: 80px;
+      height: 80px;
+      background-color: #e2e8f0;
+      color: #475569;
+      font-size: 1.5rem;
+      font-weight: bold;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+  </style>
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark-custom shadow-sm py-3">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="index.html">Tutor Web</a>
+    <a class="navbar-brand fw-bold" href="index.html">Tutor Redes e Infraestructura</a>
     <div class="d-flex ms-auto">
       <ul class="navbar-nav flex-row gap-4">
-        <li class="nav-item"><a class="nav-link active text-white" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link active text-white fw-bold" href="index.html">Inicio</a></li>
         <li class="nav-item"><a class="nav-link text-white-50" href="nosotros.html">Nosotros</a></li>
         <li class="nav-item"><a class="nav-link text-white-50" href="tecnologia.html">Tecnología</a></li>
         <li class="nav-item"><a class="nav-link text-white-50" href="topologias.html">Topologías</a></li>
@@ -44,6 +104,7 @@
 
 <div class="container mt-5 mb-4">
   <div class="bg-dark-custom text-white p-5 rounded-4 shadow-sm text-center">
+    <span class="badge bg-primary px-3 py-2 mb-3 text-uppercase fw-semibold" style="letter-spacing: 1px;">Bienvenida-Fundamentos</span>
     <h1 class="display-4 fw-bold mb-3">Tutor de Cableado Estructurado</h1>
     <p class="fs-5 text-white-75 px-lg-5">
       Plataforma educativa integral enfocada en la arquitectura, normativas internacionales y despliegue físico de infraestructuras de telecomunicaciones estandarizadas para entornos corporativos.
@@ -52,6 +113,7 @@
 </div>
 
 <div class="container mb-5">
+  
   <div class="row">
     <div class="col-12 mb-4">
       <div class="card card-shadow border-0 rounded-4 p-4">
@@ -68,7 +130,7 @@
     </div>
   </div>
 
-  <div class="row mb-4">
+  <div class="row mb-5">
     <div class="col-12 mb-3">
       <h2 class="fw-bold text-primary px-3">Beneficios del Sistema</h2>
     </div>
@@ -118,19 +180,35 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-12 mb-3">
-      <h2 class="fw-bold text-primary px-3">Servicios Convergentes</h2>
+  <div class="row mb-5">
+    <div class="col-12 mb-4">
+      <h2 class="fw-bold text-primary px-3">Servicios Convergentes en la Infraestructura Moderna</h2>
+      <p class="text-secondary text-justify px-3 fs-6">
+        La convergencia tecnológica representa la consolidación de servicios previamente aislados (voz, datos, seguridad y automatización) dentro de un canal de transmisión unificado bajo el protocolo IP. El cableado estructurado actúa como el sustrato físico indispensable que permite este fenómeno, optimizando los recursos de hardware y disminuyendo los costes de mantenimiento.
+      </p>
     </div>
     
     <div class="col-md-6 mb-4">
       <div class="card card-shadow border-0 rounded-4 overflow-hidden h-100">
         <img src="img/voip.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Telefonía VoIP">
-        <div class="card-body p-4 bg-white">
-          <h4 class="fw-bold text-dark mb-3">Telefonía IP (VoIP)</h4>
-          <p class="text-secondary text-justify mb-0">
-            Representa la evolución definitiva de las comunicaciones corporativas, transformando la voz en paquetes de datos. Este servicio elimina por completo la necesidad de redes telefónicas paralelas, centralizando la gestión en los mismos switches y reduciendo exponencialmente los costos operativos de la empresa.
-          </p>
+        <div class="card-body p-4 bg-white d-flex flex-column justify-content-between">
+          <div>
+            <div class="academic-badge">Voz sobre Protocolo de Internet</div>
+            <h4 class="fw-bold text-dark mb-3">Telefonía IP (VoIP)</h4>
+            <p class="text-secondary text-justify mb-3">
+              Representa la transición completa de las redes de conmutación de circuitos analógicas tradicionales hacia redes digitales de conmutación de paquetes. La señal de audio se digitaliza, se comprime mediante códecs específicos (como G.711 o G.729) y se encapsula en paquetes IP que viajan por el mismo cable de par trenzado que los datos de la oficina.
+            </p>
+            <div class="technical-note">
+              <strong>Estándares y Protocolos Clave:</strong>
+              <br>• <strong>SIP (Session Initiation Protocol):</strong> Protocolo de la capa de aplicación encargado de la señalización, establecimiento y finalización de las llamadas de voz.
+              <br>• <strong>RTP (Real-time Transport Protocol):</strong> Responsable del transporte físico y sincronización de los flujos de datos de audio en tiempo real.
+            </div>
+          </div>
+          <div>
+            <p class="small text-muted text-justify">
+              <strong>Requisito de Infraestructura (QoS):</strong> Para evitar retardos (delay) o fluctuaciones de fase (jitter) en la voz, los switches activos en la estrella deben configurar políticas de Calidad de Servicio (QoS), priorizando las tramas de voz mediante etiquetas VLAN (802.1Q) y bits de prioridad DiffServ (DSCP).
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -138,21 +216,85 @@
     <div class="col-md-6 mb-4">
       <div class="card card-shadow border-0 rounded-4 overflow-hidden h-100">
         <img src="img/cctv.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="CCTV IP">
-        <div class="card-body p-4 bg-white">
-          <h4 class="fw-bold text-dark mb-3">Sistemas CCTV IP</h4>
-          <p class="text-secondary text-justify mb-0">
-            Aprovecha el ancho de banda del cableado de cobre o fibra para la transmisión de video de alta definición. Mediante la tecnología PoE (Power over Ethernet), las cámaras reciben energía y datos por el mismo cable, logrando un monitoreo en tiempo real altamente seguro y centralizado.
-          </p>
+        <div class="card-body p-4 bg-white d-flex flex-column justify-content-between">
+          <div>
+            <div class="academic-badge">Seguridad Electrónica de Alta Disponibilidad</div>
+            <h4 class="fw-bold text-dark mb-3">Sistemas CCTV IP</h4>
+            <p class="text-secondary text-justify mb-3">
+              Los sistemas de Circuito Cerrado de Televisión basados en IP sustituyen los antiguos cables coaxiales de video analógico por interfaces de red RJ-45 integradas en la propia cámara de seguridad. Esto permite la transmisión de flujos de video digitalizados en altas resoluciones (Megapíxeles) directamente hacia servidores de grabación NVR (Network Video Recorder).
+            </p>
+            <div class="technical-note">
+              <strong>Mecanismo de Conectividad y Energía:</strong>
+              <br>• <strong>Estándar PoE (Power over Ethernet):</strong> Regulado por las normas IEEE 802.3af (PoE) e IEEE 802.3at (PoE+). Permite inyectar corriente eléctrica continua a través de los hilos libres de datos del cable UTP Categoría 6, energizando la cámara a distancias de hasta 100 metros sin fuentes de poder locales.
+            </div>
+          </div>
+          <div>
+            <p class="small text-muted text-justify">
+              <strong>Compresión de Datos:</strong> El tráfico de video utiliza algoritmos de compresión avanzados como H.264 o H.265 para reducir el consumo total del ancho de banda y optimizar el almacenamiento masivo sin sacrificar la nitidez de la evidencia forense.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </div>
+
+  <section class="row mt-5">
+    <div class="col-12">
+      <div class="team-section">
+        <div class="text-center mb-5">
+          <span class="badge bg-secondary px-3 py-2 text-uppercase fw-semibold" style="letter-spacing: 1px; font-size: 0.8rem;">Equipo de Trabajo</span>
+          <h3 class="fw-bold text-dark display-6 mt-2">Desarrolladores del Proyecto</h3>
+          <p class="text-muted mx-auto" style="max-width: 600px;">
+            Estudiantes de la Facultad de Ingeniería en Sistemas encargado del análisis, diseño e implementación del entorno educativo virtual de redes de datos.
+          </p>
+        </div>
+        
+        <div class="row g-4 justify-content-center">
+          
+          <div class="col-sm-6 col-md-3">
+            <div class="member-card">
+              <div class="member-avatar">K</div>
+              <h5 class="fw-bold text-dark mb-1 text-center">Karla</h5>
+              <p class="small text-primary mb-0 font-monospace">Integrante 1</p>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-3">
+            <div class="member-card">
+              <div class="member-avatar">I</div>
+              <h5 class="fw-bold text-dark mb-1 text-center">Integrante 2</h5>
+              <p class="small text-primary mb-0 font-monospace">Integrante 2</p>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-3">
+            <div class="member-card">
+              <div class="member-avatar">I</div>
+              <h5 class="fw-bold text-dark mb-1 text-center">Integrante 3</h5>
+              <p class="small text-primary mb-0 font-monospace">Integrante 3</p>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-3">
+            <div class="member-card">
+              <div class="member-avatar">I</div>
+              <h5 class="fw-bold text-dark mb-1 text-center">Integrante 4</h5>
+              <p class="small text-primary mb-0 font-monospace">Integrante 4</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
 </div>
 
 <footer class="bg-dark-custom text-center py-4 mt-auto">
   <div class="container text-white-50">
     <p class="mb-1 fw-bold text-white">Proyecto de Infraestructura - Tutor Web</p>
     <p class="small mb-0">Implementación de Cableado Estructurado y Servicios de Red</p>
+    <p class="small mb-0 mt-2">© 2026 Todos los derechos reservados</p>
   </div>
 </footer>
 

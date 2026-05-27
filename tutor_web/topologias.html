@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tutor Web - Topologías</title>
+  <title>Tutor Web - Topologías de Red</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <style>
     body {
@@ -17,22 +17,59 @@
       text-align: justify;
     }
     .card-shadow {
-      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-      transition: transform 0.2s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
     .card-shadow:hover {
       transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    }
+    .academic-badge {
+      background-color: #2563eb;
+      color: white;
+      font-size: 0.75rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 6px 12px;
+      border-radius: 50px;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+    .technical-note {
+      background-color: #eff6ff;
+      border-left: 4px solid #2563eb;
+      padding: 15px;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.9rem;
+      color: #1e40af;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    .spec-list li {
+      margin-bottom: 6px;
+    }
+    /* Contenedor optimizado para evitar texto pegado o imágenes colapsadas */
+    .topologia-card-body {
+      padding: 35px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: space-between;
     }
     .img-placeholder {
-      background-color: #f8f9fa;
-      border: 2px dashed #dee2e6;
-      padding: 20px;
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      padding: 25px; /* Mayor espacio interno para que el gráfico no toque el borde */
       text-align: center;
-      border-radius: 12px;
+      border-radius: 14px;
+      margin-top: auto;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
     }
     .img-placeholder img {
       width: 100%;
-      height: auto;
+      max-height: 220px;
+      object-fit: contain;
       border-radius: 8px;
     }
   </style>
@@ -41,7 +78,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark-custom shadow-sm py-3">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">Tutor Web</a>
+      <a class="navbar-brand fw-bold" href="index.html">Tutor Redes e Infraestructura</a>
       <div class="d-flex ms-auto">
         <ul class="navbar-nav flex-row gap-4">
           <li class="nav-item"><a class="nav-link text-white-50" href="index.html">Inicio</a></li>
@@ -57,20 +94,39 @@
   <main class="container mt-5 mb-5">
     
     <div class="bg-dark-custom text-white p-5 rounded-4 shadow-sm text-center mb-5">
+      <span class="badge bg-primary px-3 py-2 mb-3 text-uppercase fw-semibold" style="letter-spacing: 1px;">Capa Física y de Enlace de Datos</span>
       <h1 class="display-4 fw-bold mb-3">Topologías de Red</h1>
       <p class="fs-5 text-white-75 px-lg-5">
-        Configuraciones físicas y lógicas de los nodos de comunicación.
+        Configuraciones físicas y lógicas que definen la distribución geométrica de los nodos y los métodos de acceso al medio compartido.
       </p>
     </div>
 
     <div class="row mb-5">
       <div class="col-12">
-        <div class="card card-shadow border-0 rounded-4 p-4 text-center">
+        <div class="card card-shadow border-0 rounded-4 p-4">
           <div class="card-body">
-            <h2 class="fw-bold text-primary mb-3">Física vs Lógica</h2>
-            <p class="fs-5 text-secondary text-justify mx-auto mb-0" style="max-width: 800px;">
-              En el diseño de redes, la <strong>topología física</strong> describe cómo están dispuestos los cables y dispositivos en el espacio real, mientras que la <strong>topología lógica</strong> describe cómo fluyen los datos a través de esos componentes.
+            <h2 class="fw-bold text-primary mb-3 text-center">Física vs Lógica: Dos Perspectivas Cruciales</h2>
+            <p class="fs-5 text-secondary text-justify mx-auto mb-3" style="max-width: 950px;">
+              En el ámbito de la ingeniería de redes, el término topología hace referencia a la estructura matemática y geométrica de un sistema de comunicaciones. Es indispensable diferenciar las dos capas principales de abstracción:
             </p>
+            <div class="row g-4 justify-content-center">
+              <div class="col-md-5">
+                <div class="p-3 rounded-3 bg-light border-start border-primary border-3 h-100">
+                  <h5 class="fw-bold text-dark">Topología Física</h5>
+                  <p class="small text-secondary mb-0 text-justify">
+                    Define la disposición espacial del hardware, la ubicación de las canalizaciones, las rutas de interconexión y el tendido físico del cableado estructurado hacia los armarios de distribución.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="p-3 rounded-3 bg-light border-start border-success border-3 h-100">
+                  <h5 class="fw-bold text-dark">Topología Lógica</h5>
+                  <p class="small text-secondary mb-0 text-justify">
+                    Representa el mapeo del flujo de datos y señales a través de la infraestructura física. Define las rutas lógicas del tráfico basadas en los protocolos de comunicación y los accesos compartidos al medio, como los dominios de colisión.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -79,69 +135,100 @@
     <div class="row g-4 mb-5">
       
       <div class="col-md-6">
-        <div class="card card-shadow border-0 rounded-4 h-100 p-4">
-          <div class="card-body d-flex flex-column">
-            <h4 class="fw-bold text-dark mb-3">Topología en Estrella (Star)</h4>
-            <p class="text-secondary text-justify mb-3">
-              Es la arquitectura estándar para el <strong>Cableado Estructurado</strong>. Todos los nodos se conectan a un concentrador central (Switch).
-            </p>
-            <ul class="text-secondary text-start mb-4">
-              <li><strong>Ventaja:</strong> Si un cable falla, solo ese nodo se cae.</li>
-              <li><strong>Desventaja:</strong> Si el nodo central falla, toda la red cae.</li>
-            </ul>
-            <div class="img-placeholder mt-auto">
-              <img src="img/topologia_estrella.png" alt="GRÁFICA: TOPOLOGÍA EN ESTRELLA">
+        <div class="card card-shadow border-0 rounded-4 h-100 overflow-hidden">
+          <div class="topologia-card-body">
+            <div>
+              <div class="academic-badge">Estándar LAN Moderno</div>
+              <h4 class="fw-bold text-dark mb-3">Topología en Estrella (Star)</h4>
+              <p class="text-secondary text-justify mb-3">
+                Es el paradigma dominante en las arquitecturas de red de área local actuales. En esta configuración, cada nodo individual mantiene un enlace físico dedicado e independiente hacia un nodo central centralizador, comúnmente un Switch de Capa 2 o Capa 3.
+              </p>
+              <div class="technical-note">
+                <strong>Análisis Técnico:</strong> El Switch administra la conmutación de tramas por hardware usando tablas de direcciones MAC. Esto fragmenta la red de modo que cada puerto constituye su propio dominio de colisión aislado.
+              </div>
+              <ul class="text-secondary text-start mb-4 spec-list small">
+                <li><strong>Aislamiento de Fallos:</strong> El corte o avería de un segmento horizontal afecta exclusivamente a ese host terminal.</li>
+                <li><strong>Punto Único de Falla:</strong> Si el hardware del Switch central sufre una interrupción energética o daño en su placa primaria, toda la infraestructura dependiente queda incomunicada.</li>
+                <li>Mantenimiento sumamente simplificado y alta compatibilidad con transmisiones Full-Duplex.</li>
+              </ul>
+            </div>
+            <div class="img-placeholder">
+              <img src="img/topologia_estrella.png" alt="Esquema estructural de una topología de red en estrella">
             </div>
           </div>
         </div>
       </div>
 
       <div class="col-md-6">
-        <div class="card card-shadow border-0 rounded-4 h-100 p-4">
-          <div class="card-body d-flex flex-column">
-            <h4 class="fw-bold text-dark mb-3">Topología en Árbol (Tree)</h4>
-            <p class="text-secondary text-justify mb-3">
-              Es una variante de la estrella conectada jerárquicamente. Se usa para conectar diferentes pisos o edificios (Backbone).
-            </p>
-            <ul class="text-secondary text-start mb-4">
-              <li><strong>Uso:</strong> Ideal para redes de campus o edificios grandes.</li>
-            </ul>
-            <div class="img-placeholder mt-auto">
-              <img src="img/topologia_arbol.jpg" alt="GRÁFICA: TOPOLOGÍA EN ÁRBOL">
+        <div class="card card-shadow border-0 rounded-4 h-100 overflow-hidden">
+          <div class="topologia-card-body">
+            <div>
+              <div class="academic-badge">Distribución Jerárquica</div>
+              <h4 class="fw-bold text-dark mb-3">Topología en Árbol (Tree)</h4>
+              <p class="text-secondary text-justify mb-3">
+                Conceptualmente es una variación avanzada de la topología en estrella estructurada en múltiples niveles jerárquicos. Cuenta con un nodo raíz principal que se conecta a distribuidores intermedios, encargados a su vez de interconectar subestrellas locales.
+              </p>
+              <div class="technical-note">
+                <strong>Aplicación en Planta Externa e Interna:</strong> Se utiliza como base para el diseño del cableado vertical o Backbone corporativo, uniendo el Distribuidor Principal de Campus (MC) con los Distribuidores de Edificio (IC) y de Piso (HC).
+              </div>
+              <ul class="text-secondary text-start mb-4 spec-list small">
+                <li><strong>Alta Escalabilidad:</strong> Permite la segmentación territorial por pisos de trabajo o departamentos lógicos.</li>
+                <li><strong>Control de Tráfico:</strong> Facilita la implementación de políticas de enrutamiento interno y listas de control de acceso (ACL).</li>
+                <li>Requiere cálculos estrictos de agregación de enlaces para evitar cuellos de botella en los niveles troncales superiores.</li>
+              </ul>
+            </div>
+            <div class="img-placeholder">
+              <img src="img/topologia_arbol.jpg" alt="Gráfica jerárquica de una distribución en topología de árbol">
             </div>
           </div>
         </div>
       </div>
 
       <div class="col-md-6">
-        <div class="card card-shadow border-0 rounded-4 h-100 p-4">
-          <div class="card-body d-flex flex-column">
-            <h4 class="fw-bold text-dark mb-3">Topología en Malla (Mesh)</h4>
-            <p class="text-secondary text-justify mb-3">
-              Cada nodo tiene una conexión directa con todos los demás, permitiendo múltiples rutas para el tráfico de datos.
-            </p>
-            <ul class="text-secondary text-start mb-4">
-              <li><strong>Ventaja:</strong> Máxima redundancia y tolerancia a fallos.</li>
-            </ul>
-            <div class="img-placeholder mt-auto">
-              <img src="img/topologia_malla.png" alt="GRÁFICA: TOPOLOGÍA EN MALLA">
+        <div class="card card-shadow border-0 rounded-4 h-100 overflow-hidden">
+          <div class="topologia-card-body">
+            <div>
+              <div class="academic-badge">Tolerancia Crítica a Fallos</div>
+              <h4 class="fw-bold text-dark mb-3">Topología en Malla (Mesh)</h4>
+              <p class="text-secondary text-justify mb-3">
+                Involucra un esquema de interconexión donde los dispositivos disponen de múltiples enlaces redundantes directos hacia los demás nodos de la infraestructura física. Puede ser implementada de forma parcial o total.
+              </p>
+              <div class="technical-note">
+                <strong>Fórmula de Enlaces Físicos:</strong> Para una malla completa con N nodos, el número total de enlaces físicos necesarios se calcula mediante la relación matemática: <strong>Enlaces = N * (N - 1) / 2</strong>.
+              </div>
+              <ul class="text-secondary text-start mb-4 spec-list small">
+                <li><strong>Redundancia Absoluta:</strong> Si una ruta de fibra o cobre se fractura, los protocolos de enrutamiento dinámico (como OSPF o BGP) recalculan el salto de datos en milisegundos a través de canales alternativos.</li>
+                <li><strong>Costes de Implantación Elevados:</strong> Exige una alta densidad de puertos de interfaz de red y grandes volúmenes de medios de transmisión físicos.</li>
+                <li>Utilizada comúnmente en la infraestructura de Core de centros de datos de alta disponibilidad y redes WAN de misión crítica.</li>
+              </ul>
+            </div>
+            <div class="img-placeholder">
+              <img src="img/topologia_malla.png" alt="Representación matemática y visual de una red en malla completa">
             </div>
           </div>
         </div>
       </div>
 
       <div class="col-md-6">
-        <div class="card card-shadow border-0 rounded-4 h-100 p-4">
-          <div class="card-body d-flex flex-column">
-            <h4 class="fw-bold text-dark mb-3">Bus y Anillo (Legacy)</h4>
-            <p class="text-secondary text-justify mb-3">
-              Topologías clásicas donde los nodos comparten un mismo canal (Bus) o se conectan en círculo (Anillo).
-            </p>
-            <ul class="text-secondary text-start mb-4">
-              <li><strong>Uso:</strong> Actualmente poco comunes en redes LAN modernas.</li>
-            </ul>
-            <div class="img-placeholder mt-auto">
-              <img src="img/topologia_bus.png" alt="GRÁFICA: BUS Y ANILLO">
+        <div class="card card-shadow border-0 rounded-4 h-100 overflow-hidden">
+          <div class="topologia-card-body">
+            <div>
+              <div class="academic-badge">Infraestructura de Legado (Legacy)</div>
+              <h4 class="fw-bold text-dark mb-3">Bus y Anillo (Legacy)</h4>
+              <p class="text-secondary text-justify mb-3">
+                Sistemas clásicos comunes en los inicios de las redes de datos computacionales. En la topología de Bus, todos los hosts comparten un único canal físico lineal terminado en sus extremos. En Anillo, las estaciones se conectan en bucle cerrado cerrado de forma secuencial.
+              </p>
+              <div class="technical-note">
+                <strong>Modelos Operativos Clásicos:</strong> El Bus operaba bajo el estándar IEEE 802.3 original empleando cables coaxiales, mientras que el Anillo utilizaba el mecanismo de paso de testigo electrónico (Token Ring - IEEE 802.5).
+              </div>
+              <ul class="text-secondary text-start mb-4 spec-list small">
+                <li><strong>Limitaciones de Bus:</strong> Alta tasa de colisiones. La rotura del cable principal o la ausencia de un terminador resistivo provocaba el colapso total por reflexión de ondas.</li>
+                <li><strong>Limitaciones de Anillo:</strong> El rendimiento disminuye a medida que se añaden nodos. Si una sola estación de trabajo falla en el anillo unidireccional, se interrumpe la continuidad física del circuito de datos.</li>
+                <li>Actualmente obsoletas en redes locales corporativas, sustituidas íntegramente por conmutación en estrella.</li>
+              </ul>
+            </div>
+            <div class="img-placeholder">
+              <img src="img/topologia_bus.png" alt="Esquema comparativo de arquitecturas legacy en bus y anillo">
             </div>
           </div>
         </div>
