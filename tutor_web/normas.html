@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Normas - Cableado Estructurado</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(135deg, #eef4ff, #f8fafc, #ede9fe);
+      color: #0f172a;
+    }
+
+    .navbar {
+      background: linear-gradient(90deg, #020617, #0f172a, #1e3a8a) !important;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar-brand {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: white !important;
+    }
+
+    .nav-link {
+      color: rgba(255,255,255,0.75) !important;
+      font-weight: 600;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: #ffffff !important;
+      border-bottom: 3px solid #38bdf8;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0f172a, #1d4ed8, #7c3aed);
+      color: white;
+      border-radius: 35px;
+      padding: 4rem 2rem;
+      box-shadow: 0 18px 40px rgba(37,99,235,0.30);
+      text-align: center;
+    }
+
+    .card {
+      border: none;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.94);
+      box-shadow: 0 8px 28px rgba(31,38,135,0.13);
+      transition: 0.35s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 45px rgba(0,0,0,0.16);
+    }
+
+    .text-justify {
+      text-align: justify;
+    }
+
+    .academic-badge {
+      background-color: #2563eb;
+      color: white;
+      font-size: 0.75rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 6px 12px;
+      border-radius: 50px;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
+    .technical-note {
+      background-color: #eff6ff;
+      border-left: 4px solid #2563eb;
+      padding: 15px;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+      color: #1e40af;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background: linear-gradient(90deg, #020617, #0f172a, #1e293b);
+      color: rgba(255,255,255,0.7);
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark py-3">
+    <div class="container">
+      <a class="navbar-brand" href="tutor.html">Tutor Web</a>
+
+      <div class="d-flex ms-auto">
+        <ul class="navbar-nav flex-row gap-4">
+          <li class="nav-item">
+            <a class="nav-link text-white-50" href="index.html">Portada</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-white-50" href="tutor.html">Inicio Tutor</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-white-50" href="topologias.html">Topologías</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-white-50" href="tecnologia.html">Tecnología</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-white-50" href="elementos.html">Elementos</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active text-white fw-bold" href="normas.html">Normas</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <main class="container mt-5 mb-5">
+
+    <section class="hero mb-5">
+      <span class="badge bg-primary px-3 py-2 mb-3 text-uppercase fw-semibold">
+        Estándares de Instalación
+      </span>
+
+      <h1 class="display-4 fw-bold mb-3">
+        Normas del Cableado Estructurado
+      </h1>
+
+      <p class="fs-5 px-lg-5">
+        Las normas permiten que una instalación de cableado estructurado sea
+        ordenada, segura, administrable y compatible con diferentes tecnologías
+        de telecomunicaciones.
+      </p>
+    </section>
+
+
+    <section class="row mb-5">
+      <div class="col-12">
+        <div class="card p-4">
+          <div class="card-body">
+            <span class="academic-badge">Importancia</span>
+
+            <h2 class="fw-bold text-primary mb-3">
+              ¿Por qué son importantes las normas?
+            </h2>
+
+            <p class="fs-5 text-secondary text-justify mb-0">
+              Las normas de cableado estructurado sirven como guía para diseñar,
+              instalar, identificar y mantener una infraestructura de red. Gracias
+              a ellas se puede garantizar que el cableado tenga una correcta
+              organización, soporte servicios actuales y futuros, reduzca fallas
+              y cumpla con criterios de seguridad.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="row g-4 mb-5">
+
+      <div class="col-md-6">
+        <div class="card h-100 p-4">
+          <div class="card-body">
+            <span class="academic-badge">ANSI/TIA/EIA-568</span>
+            <h3 class="fw-bold text-primary mb-3">
+              Cableado de Telecomunicaciones
+            </h3>
+            <p class="text-secondary text-justify mb-0">
+              Establece criterios para el cableado de telecomunicaciones en
+              edificios comerciales. Define aspectos relacionados con medios de
+              transmisión, conectores, distancias y organización del sistema.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-6">
+        <div class="card h-100 p-4">
+          <div class="card-body">
+            <span class="academic-badge">ANSI/TIA/EIA-569</span>
+            <h3 class="fw-bold text-primary mb-3">
+              Ductos y Espacios
+            </h3>
+            <p class="text-secondary text-justify mb-0">
+              Establece recomendaciones para los espacios físicos y rutas por
+              donde debe pasar el cableado, como canalizaciones, cuartos de
+              telecomunicaciones, ductos y áreas técnicas.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-6">
+        <div class="card h-100 p-4">
+          <div class="card-body">
+            <span class="academic-badge">ANSI/TIA/EIA-570</span>
+            <h3 class="fw-bold text-primary mb-3">
+              Cableado Residencial
+            </h3>
+            <p class="text-secondary text-justify mb-0">
+              Norma relacionada con el cableado de telecomunicaciones en
+              instalaciones residenciales y comerciales livianas, permitiendo
+              organizar servicios de comunicación en espacios pequeños.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-6">
+        <div class="card h-100 p-4">
+          <div class="card-body">
+            <span class="academic-badge">ANSI/TIA/EIA-606</span>
+            <h3 class="fw-bold text-primary mb-3">
+              Administración del Cableado
+            </h3>
+            <p class="text-secondary text-justify mb-0">
+              Define criterios para la identificación y administración de la
+              infraestructura de telecomunicaciones. Incluye etiquetado,
+              documentación, registros y organización de puntos de red.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-6">
+        <div class="card h-100 p-4">
+          <div class="card-body">
+            <span class="academic-badge">ANSI/TIA/EIA-607</span>
+            <h3 class="fw-bold text-primary mb-3">
+              Puesta a Tierra
+            </h3>
+            <p class="text-secondary text-justify mb-0">
+              Establece requerimientos para la puesta a tierra y puenteado de
+              sistemas de telecomunicaciones en edificios comerciales, ayudando
+              a proteger equipos y personas.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-6">
+        <div class="card h-100 p-4">
+          <div class="card-body">
+            <span class="academic-badge">NFPA</span>
+            <h3 class="fw-bold text-primary mb-3">
+              Protección y Seguridad
+            </h3>
+            <p class="text-secondary text-justify mb-0">
+              Las normas NFPA se relacionan con la protección de equipos
+              electrónicos y sistemas contra riesgos como incendios, descargas
+              eléctricas o rayos.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+    <section class="row mb-5">
+      <div class="col-12">
+        <div class="card p-4">
+          <div class="card-body">
+            <span class="academic-badge">Buenas Prácticas</span>
+
+            <h2 class="fw-bold text-primary mb-4 text-center">
+              Recomendaciones Generales de Instalación
+            </h2>
+
+            <div class="row g-4">
+
+              <div class="col-md-6">
+                <div class="technical-note h-100">
+                  <h5 class="fw-bold">Separar cables de red y energía</h5>
+                  <p class="mb-0">
+                    Los cables UTP no deben circular junto a cables eléctricos
+                    dentro de la misma canalización, ya que pueden generarse
+                    interferencias.
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="technical-note h-100">
+                  <h5 class="fw-bold">No maltratar el cable</h5>
+                  <p class="mb-0">
+                    Al usar grapas, canaletas o amarres, se debe evitar aplastar
+                    o doblar excesivamente los cables.
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="technical-note h-100">
+                  <h5 class="fw-bold">Mantener una buena administración</h5>
+                  <p class="mb-0">
+                    Cada punto de red debe estar etiquetado para facilitar
+                    mantenimiento, pruebas y solución de problemas.
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="technical-note h-100">
+                  <h5 class="fw-bold">Controlar temperatura y seguridad</h5>
+                  <p class="mb-0">
+                    Los cuartos de equipos deben tener ventilación, iluminación,
+                    acceso restringido y tomacorrientes suficientes.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="text-center py-4">
+    <div class="container">
+      <p class="mb-1 fw-bold text-white">Proyecto de Infraestructura - Tutor Web</p>
+      <p class="small mb-0">Normas y Recomendaciones para Cableado Estructurado</p>
+      <p class="small mb-0 mt-2">© 2026 Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutor Web - Cableado Estructurado</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(135deg, #eef4ff, #f8fafc, #ede9fe);
+      color: #0f172a;
+    }
+
+    .bg-dark-custom {
+      background-color: #0f172a;
+    }
+
+    .navbar {
+      background: linear-gradient(90deg, #020617, #0f172a, #1e3a8a) !important;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar-brand {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: white !important;
+    }
+
+    .nav-link {
+      color: rgba(255,255,255,0.75) !important;
+      font-weight: 600;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: #ffffff !important;
+      border-bottom: 3px solid #38bdf8;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0f172a, #1d4ed8, #7c3aed);
+      color: white;
+      border-radius: 35px;
+      padding: 4rem 2rem;
+      box-shadow: 0 18px 40px rgba(37,99,235,0.30);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 50%;
+      top: -90px;
+      right: -80px;
+    }
+
+    .hero h1,
+    .hero p,
+    .hero span {
+      position: relative;
+      z-index: 2;
+    }
+
+    .card {
+      border: none;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.94);
+      box-shadow: 0 8px 28px rgba(31,38,135,0.13);
+      transition: 0.35s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 45px rgba(0,0,0,0.16);
+    }
+
+    .text-justify {
+      text-align: justify;
+    }
+
+    .academic-badge {
+      background-color: #2563eb;
+      color: white;
+      font-size: 0.75rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 6px 12px;
+      border-radius: 50px;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
+    .technical-note {
+      background-color: #eff6ff;
+      border-left: 4px solid #2563eb;
+      padding: 15px;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.9rem;
+      color: #1e40af;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
+    .btn-custom {
+      border-radius: 999px;
+      font-weight: 700;
+      padding: 0.55rem 1.3rem;
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      color: white;
+      border: none;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.3s;
+    }
+
+    .btn-custom:hover {
+      color: white;
+      transform: scale(1.07);
+      box-shadow: 0 10px 25px rgba(37,99,235,0.35);
+    }
+
+    footer {
+      background: linear-gradient(90deg, #020617, #0f172a, #1e293b);
+      color: rgba(255,255,255,0.7);
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVEGADOR INTERNO DEL TUTOR -->
+  <nav class="navbar navbar-expand-lg navbar-dark py-3">
+    <div class="container">
+      <a class="navbar-brand" href="tutor.html">Tutor Web</a>
+
+      <div class="d-flex ms-auto">
+        <ul class="navbar-nav flex-row gap-4">
+
+          <li class="nav-item">
+            <a class="nav-link text-white-50" href="index.html">Portada</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active text-white fw-bold" href="tutor.html">Inicio Tutor</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-white-50" href="topologias.html">Topologías</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-white-50" href="tecnologia.html">Tecnología</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-white-50" href="elementos.html">Elementos</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-white-50" href="normas.html">Normas</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <main class="container mt-5 mb-5">
+
+    <!-- ENCABEZADO PRINCIPAL -->
+    <section class="hero mb-5">
+      <span class="badge bg-primary px-3 py-2 mb-3 text-uppercase fw-semibold">
+        Bienvenida - Fundamentos
+      </span>
+
+      <h1 class="display-4 fw-bold mb-3">
+        Tutor de Cableado Estructurado
+      </h1>
+
+      <p class="fs-5 px-lg-5">
+        Plataforma educativa integral enfocada en la arquitectura, normativas
+        internacionales, beneficios y despliegue físico de infraestructuras de
+        telecomunicaciones estandarizadas.
+      </p>
+    </section>
+
+
+    <!-- DEFINICIÓN -->
+    <section class="row mb-5">
+      <div class="col-12">
+        <div class="card p-4">
+          <div class="card-body">
+
+            <span class="academic-badge">Definición</span>
+
+            <h2 class="fw-bold text-primary mb-3">
+              ¿Qué es el Cableado Estructurado?
+            </h2>
+
+            <p class="fs-5 text-secondary text-justify mb-3">
+              El cableado estructurado es un sistema de conectividad físico y
+              estandarizado que proporciona una infraestructura de telecomunicaciones
+              unificada para la transmisión de voz, datos y video dentro de un
+              edificio, laboratorio, empresa o campus.
+            </p>
+
+            <p class="fs-5 text-secondary text-justify mb-0">
+              Su diseño se basa en normas técnicas que permiten mantener una red
+              ordenada, flexible, compatible y preparada para nuevas tecnologías.
+              A diferencia de una instalación improvisada, esta arquitectura facilita
+              el mantenimiento, la administración y la expansión de los servicios.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- CARACTERÍSTICAS -->
+    <section class="row mb-5">
+      <div class="col-12">
+        <div class="card p-4">
+          <div class="card-body">
+
+            <span class="academic-badge">Características</span>
+
+            <h2 class="fw-bold text-primary mb-4">
+              Características del Cableado Estructurado
+            </h2>
+
+            <div class="row g-4">
+
+              <div class="col-md-6">
+                <div class="technical-note h-100">
+                  <h5 class="fw-bold">Capacidad</h5>
+                  <p class="mb-0">
+                    Permite transmitir información de múltiples servicios y
+                    tecnologías, como internet, telefonía IP, video, seguridad
+                    y automatización.
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="technical-note h-100">
+                  <h5 class="fw-bold">Flexibilidad</h5>
+                  <p class="mb-0">
+                    Permite incorporar nuevos equipos o servicios sin modificar
+                    completamente la infraestructura existente.
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="technical-note h-100">
+                  <h5 class="fw-bold">Diseño organizado</h5>
+                  <p class="mb-0">
+                    Mantiene los cables, puntos de red y equipos distribuidos de
+                    forma ordenada, reduciendo el desorden y facilitando el control.
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="technical-note h-100">
+                  <h5 class="fw-bold">Integración de servicios</h5>
+                  <p class="mb-0">
+                    Reúne en una sola infraestructura servicios de datos, voz,
+                    audio, video, cámaras IP, telefonía y sistemas de control.
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="technical-note h-100">
+                  <h5 class="fw-bold">Administración centralizada</h5>
+                  <p class="mb-0">
+                    Facilita la identificación de puntos, la documentación,
+                    el mantenimiento y la solución de fallas.
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="technical-note h-100">
+                  <h5 class="fw-bold">Compatibilidad</h5>
+                  <p class="mb-0">
+                    Puede trabajar con diferentes marcas, equipos y tecnologías
+                    siempre que cumplan estándares de red.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- BENEFICIOS -->
+    <section class="mb-5">
+
+      <h2 class="fw-bold text-primary mb-4 text-center">
+        Beneficios del Sistema
+      </h2>
+
+      <div class="row g-4">
+
+        <div class="col-md-6">
+          <div class="card h-100 p-4">
+            <div class="card-body">
+              <h4 class="fw-bold text-dark mb-3">
+                Escalabilidad y Flexibilidad
+              </h4>
+
+              <p class="text-secondary text-justify mb-0">
+                Facilita la incorporación, reubicación o actualización de nodos
+                y equipos de red sin necesidad de intervenir todo el cableado ni
+                interrumpir los servicios principales.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-6">
+          <div class="card h-100 p-4">
+            <div class="card-body">
+              <h4 class="fw-bold text-dark mb-3">
+                Aislamiento de Fallas
+              </h4>
+
+              <p class="text-secondary text-justify mb-0">
+                Al utilizar una organización por segmentos y puntos centralizados,
+                cualquier problema de conectividad puede localizarse con mayor
+                rapidez, evitando que toda la red se vea afectada.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-6">
+          <div class="card h-100 p-4">
+            <div class="card-body">
+              <h4 class="fw-bold text-dark mb-3">
+                Retorno de Inversión
+              </h4>
+
+              <p class="text-secondary text-justify mb-0">
+                Una infraestructura bien diseñada puede durar varios años y
+                soportar nuevas generaciones de equipos, reduciendo gastos de
+                reinstalación o reparaciones constantes.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-6">
+          <div class="card h-100 p-4">
+            <div class="card-body">
+              <h4 class="fw-bold text-dark mb-3">
+                Administración Centralizada
+              </h4>
+
+              <p class="text-secondary text-justify mb-0">
+                La concentración de conexiones en racks, patch panels y cuartos
+                de comunicaciones permite controlar, ordenar y documentar mejor
+                toda la infraestructura de red.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- IMPORTANCIA -->
+    <section class="row mb-5">
+      <div class="col-12">
+        <div class="card p-4">
+          <div class="card-body">
+
+            <span class="academic-badge">Importancia</span>
+
+            <h2 class="fw-bold text-primary mb-3">
+              Importancia del Cableado Estructurado
+            </h2>
+
+            <p class="fs-5 text-secondary text-justify mb-3">
+              El cableado estructurado es importante porque permite construir una
+              red confiable, ordenada y preparada para crecer. Además, ayuda a
+              instalar la infraestructura sin depender completamente de los equipos
+              que se usarán al inicio, ya que puede adaptarse a nuevas necesidades.
+            </p>
+
+            <p class="fs-5 text-secondary text-justify mb-0">
+              También facilita el mantenimiento, reduce fallas físicas, mejora el
+              rendimiento de la red y permite integrar servicios modernos como
+              telefonía IP, cámaras de seguridad, internet, servidores y sistemas
+              de automatización.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ACCESOS A TEMAS -->
+    <section class="row g-4 mb-5">
+
+      <div class="col-md-3">
+        <div class="card h-100 text-center p-4">
+          <div class="card-body">
+            <h3 class="fw-bold text-primary mb-3">Topologías</h3>
+
+            <p class="text-muted">
+              Formas en que se conectan los dispositivos dentro de una red.
+            </p>
+
+            <a href="topologias.html" class="btn-custom">
+              Ver Topologías
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-3">
+        <div class="card h-100 text-center p-4">
+          <div class="card-body">
+            <h3 class="fw-bold text-primary mb-3">Tecnología</h3>
+
+            <p class="text-muted">
+              Tipos de cable, fibra óptica, velocidades y dispositivos.
+            </p>
+
+            <a href="tecnologia.html" class="btn-custom">
+              Ver Tecnología
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-3">
+        <div class="card h-100 text-center p-4">
+          <div class="card-body">
+            <h3 class="fw-bold text-primary mb-3">Elementos</h3>
+
+            <p class="text-muted">
+              Componentes físicos usados en una red estructurada.
+            </p>
+
+            <a href="elementos.html" class="btn-custom">
+              Ver Elementos
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-3">
+        <div class="card h-100 text-center p-4">
+          <div class="card-body">
+            <h3 class="fw-bold text-primary mb-3">Normas</h3>
+
+            <p class="text-muted">
+              Estándares técnicos para instalación y administración.
+            </p>
+
+            <a href="normas.html" class="btn-custom">
+              Ver Normas
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- SERVICIOS CONVERGENTES -->
+    <section class="mb-5">
+
+      <div class="row mb-4">
+        <div class="col-12">
+          <h2 class="fw-bold text-primary px-3">
+            Servicios Convergentes en la Infraestructura Moderna
+          </h2>
+
+          <p class="text-secondary text-justify px-3 fs-5">
+            La convergencia tecnológica permite que servicios que antes funcionaban
+            por separado, como voz, datos, video, seguridad y automatización, ahora
+            trabajen sobre una misma infraestructura de red basada en cableado
+            estructurado.
+          </p>
+        </div>
+      </div>
+
+
+      <div class="row g-4">
+
+        <div class="col-md-6">
+          <div class="card h-100 overflow-hidden">
+            <img src="img/voip.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Telefonía VoIP">
+
+            <div class="card-body p-4 bg-white">
+              <div class="academic-badge">
+                Voz sobre Protocolo de Internet
+              </div>
+
+              <h4 class="fw-bold text-dark mb-3">
+                Telefonía IP (VoIP)
+              </h4>
+
+              <p class="text-secondary text-justify mb-3">
+                La telefonía IP permite realizar llamadas utilizando la red de
+                datos. La voz se convierte en paquetes digitales y viaja por el
+                mismo cableado que usan las computadoras y otros dispositivos.
+              </p>
+
+              <div class="technical-note">
+                <strong>Protocolos importantes:</strong>
+                <br>• <strong>SIP:</strong> ayuda a iniciar, mantener y finalizar llamadas.
+                <br>• <strong>RTP:</strong> transporta el audio en tiempo real.
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-6">
+          <div class="card h-100 overflow-hidden">
+            <img src="img/cctv.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="CCTV IP">
+
+            <div class="card-body p-4 bg-white">
+              <div class="academic-badge">
+                Seguridad Electrónica
+              </div>
+
+              <h4 class="fw-bold text-dark mb-3">
+                Sistemas CCTV IP
+              </h4>
+
+              <p class="text-secondary text-justify mb-3">
+                Los sistemas CCTV IP permiten conectar cámaras de seguridad a la
+                red mediante cable UTP o fibra óptica. Las cámaras envían video
+                digital hacia servidores de grabación o monitoreo.
+              </p>
+
+              <div class="technical-note">
+                <strong>Ventaja principal:</strong>
+                <br>Muchas cámaras IP pueden usar PoE, es decir, recibir datos y
+                energía eléctrica por el mismo cable de red.
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CIERRE -->
+    <section class="row">
+      <div class="col-12">
+        <div class="card p-4 text-center">
+          <div class="card-body">
+
+            <h2 class="fw-bold text-primary mb-3">
+              Importancia del Tutor Web
+            </h2>
+
+            <p class="fs-5 text-secondary mb-0">
+              Este tutor permite aprender los temas principales del cableado
+              estructurado de forma ordenada, visual y sencilla, facilitando la
+              comprensión de la infraestructura física que sostiene una red de
+              datos moderna.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="text-center py-4">
+    <div class="container">
+      <p class="mb-1 fw-bold text-white">
+        Proyecto de Infraestructura - Tutor Web
+      </p>
+
+      <p class="small mb-0">
+        Implementación de Cableado Estructurado y Servicios de Red
+      </p>
+
+      <p class="small mb-0 mt-2">
+        © 2026 Todos los derechos reservados
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -4,159 +4,326 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tutor Web - Nosotros</title>
+
   <link rel="stylesheet" href="css/bootstrap.min.css">
+
   <style>
     body {
-      background-color: #f8f9fa;
-      font-family: system-ui, -apple-system, sans-serif;
+      background: linear-gradient(135deg, #eef2ff, #f8fafc, #f1f5f9);
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: #0f172a;
     }
+
     .bg-dark-custom {
       background-color: #0f172a;
     }
-    .card-shadow {
-      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-      transition: transform 0.2s ease;
+
+    .navbar {
+      background: linear-gradient(90deg, #020617, #0f172a, #1e3a8a) !important;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.20);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-    .card-shadow:hover {
-      transform: translateY(-5px);
+
+    .navbar-brand {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: white !important;
+      letter-spacing: 0.4px;
     }
-    .profile-img {
-      width: 140px;
-      height: 140px;
-      object-fit: cover;
+
+    .nav-link {
+      color: rgba(255,255,255,0.75) !important;
+      font-weight: 600;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: #ffffff !important;
+      border-bottom: 3px solid #60a5fa;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0f172a, #1d4ed8, #7c3aed);
+      color: white;
+      border-radius: 32px;
+      padding: 4rem 2rem;
+      text-align: center;
+      box-shadow: 0 18px 40px rgba(37,99,235,0.25);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      background: rgba(255,255,255,0.08);
       border-radius: 50%;
-      border: 5px solid #0f172a;
-      margin-top: -70px;
-      background-color: white;
+      top: -90px;
+      right: -70px;
     }
-    .card-spacing {
-      margin-top: 80px;
+
+    .hero h1,
+    .hero p,
+    .hero span {
+      position: relative;
+      z-index: 2;
+    }
+
+    .section-badge {
+      background: rgba(255,255,255,0.18);
+      color: white;
+      display: inline-block;
+      padding: 8px 18px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+   .card-spacing {
+  margin-top: 115px;
+}
+
+    .member-card {
+      border: none;
+      border-radius: 28px;
+      background: rgba(255,255,255,0.95);
+      box-shadow: 0 12px 30px rgba(15,23,42,0.08);
+      transition: transform 0.28s ease, box-shadow 0.28s ease;
+      overflow: visible;
+      position: relative;
+      height: 100%;
+    }
+
+    .member-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 22px 45px rgba(15,23,42,0.14);
+    }
+
+    .profile-img {
+  width: 210px;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid #ffffff;
+  box-shadow: 0 12px 28px rgba(15,23,42,0.20);
+  margin-top: -105px;
+  background-color: white;
+}
+    
+    .member-role {
+      display: inline-block;
+      background: linear-gradient(135deg, #dbeafe, #e0e7ff);
+      color: #1d4ed8;
+      padding: 8px 18px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-top: 10px;
+      margin-bottom: 18px;
+    }
+
+    .member-name {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 6px;
+      line-height: 1.2;
+    }
+
+    .member-lastname {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #2563eb;
+      margin-bottom: 20px;
+    }
+
+    .divider {
+      width: 70px;
+      height: 4px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #2563eb, #7c3aed);
+      margin: 0 auto 22px auto;
+    }
+
+    .info-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: left;
+    }
+
+    .info-list li {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 12px 14px;
+      margin-bottom: 12px;
+      color: #334155;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .info-list strong {
+      color: #0f172a;
+    }
+
+    .info-list li:hover {
+      background: #ffffff;
+      border-color: #cbd5e1;
+    }
+
+    footer {
+      background: linear-gradient(90deg, #020617, #0f172a, #1e293b);
+      color: rgba(255,255,255,0.75);
+      margin-top: 4rem;
+    }
+
+    @media (max-width: 768px) {
+      .member-name {
+        font-size: 1.65rem;
+      }
+
+      .member-lastname {
+        font-size: 1.1rem;
+      }
+
+      .hero {
+        padding: 3rem 1.5rem;
+      }
     }
   </style>
 </head>
+
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark-custom shadow-sm py-3">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark py-3">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">Tutor Web</a>
+      <a class="navbar-brand fw-bold" href="index.html">Nosotros</a>
+
       <div class="d-flex ms-auto">
         <ul class="navbar-nav flex-row gap-4">
-          <li class="nav-item"><a class="nav-link text-white-50" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link active text-white fw-bold" href="nosotros.html">Nosotros</a></li>
-          <li class="nav-item"><a class="nav-link text-white-50" href="tecnologia.html">Tecnología</a></li>
-          <li class="nav-item"><a class="nav-link text-white-50" href="topologias.html">Topologías</a></li>
-          <li class="nav-item"><a class="nav-link text-white-50" href="elementos.html">Elementos</a></li>
+          <li class="nav-item">
+            <a class="nav-link text-white-50" href="index.html">Portada</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active text-white fw-bold" href="nosotros.html">Nosotros</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 
   <main class="container mt-5 mb-5">
-    
-    <div class="bg-dark-custom text-white p-5 rounded-4 shadow-sm text-center mb-5">
-      <h1 class="display-4 fw-bold mb-3">Equipo de Trabajo</h1>
-      <p class="fs-5 text-white-75 px-lg-5">
-        Conoce a los desarrolladores y arquitectos de red detrás de la plataforma Tutor Web.
+
+    <!-- ENCABEZADO -->
+    <section class="hero mb-5">
+      <span class="section-badge">Equipo de Trabajo</span>
+      <h1 class="display-4 fw-bold mb-3">Conoce a Nuestro Equipo</h1>
+      <p class="fs-5 px-lg-5 mb-0">
+        Presentamos a los integrantes responsables del diseño, desarrollo e
+        implementación de la plataforma Tutor Web de Cableado Estructurado.
       </p>
-    </div>
+    </section>
 
+    <!-- TARJETAS -->
     <div class="row g-4 justify-content-center">
-      
-      <div class="col-md-6 col-lg-4 card-spacing">
-        <div class="card card-shadow border-0 rounded-4 h-100 px-3 pb-3 text-center">
-          <img src="img/foto_1.jpg" alt="Foto Integrante 1" class="profile-img mx-auto shadow-sm">
+
+      <!-- KARLA -->
+      <div class="col-md-6 col-lg-6 card-spacing">
+        <div class="card member-card text-center px-4 pb-4">
+          <img src="img/foto_karlita.jpg" alt="Foto de Karla Guaña" class="profile-img mx-auto">
           <div class="card-body">
-            <h4 class="fw-bold text-dark mt-2">[Nombres]</h4>
-            <h5 class="text-primary mb-3">[Apellidos]</h5>
-            
-            <ul class="list-unstyled text-secondary text-start small mb-0">
-              <li class="mb-2"><strong>Fecha de Nacimiento:</strong> [Dato]</li>
-              <li class="mb-2"><strong>Skills:</strong> [Dato]</li>
-              <li class="mb-2"><strong>Libros leídos:</strong> [Dato]</li>
-              <li class="mb-2"><strong>Deportes:</strong> [Dato]</li>
-              <li class="mb-2"><strong>Hobbies:</strong> [Dato]</li>
-              <li class="mb-2"><strong>Películas:</strong> [Dato]</li>
-              <li class="mb-2"><strong>Certificaciones:</strong> [Dato]</li>
+            <span class="member-role">Integrante 1</span>
+            <h2 class="member-name">Karla Betzabeth</h2>
+            <h4 class="member-lastname">Guaña Espinosa</h4>
+            <div class="divider"></div>
+
+            <ul class="info-list">
+              <li><strong>Fecha de Nacimiento:</strong> 24 de Octubre de 2006</li>
+              <li><strong>Libros leídos:</strong> El psicoanalista, El arte de la guerra, Sangre de Campeón.</li>
+              <li><strong>Skills:</strong> Responsable, comprometida, comunicativa, social.</li>
+              <li><strong>Deportes que practica:</strong> Correr.</li>
+              <li><strong>Hobbies:</strong> Escuchar música, leer y escribir.</li>
+              <li><strong>Películas favoritas:</strong> La vida es bella, Bad Boys, Harry Potter.</li>
+              <li><strong>Certificaciones:</strong> Concursos de Oratoria y Declamación, Certificado JISIC 2025, Certificado BWAI por la USFQ - Google Developer.</li>
             </ul>
           </div>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-4 card-spacing">
-        <div class="card card-shadow border-0 rounded-4 h-100 px-3 pb-3 text-center">
-          <img src="img/foto_2.jpg" alt="Foto Integrante 2" class="profile-img mx-auto shadow-sm">
+      <!-- INTEGRANTE 2 -->
+      <div class="col-md-6 col-lg-6 card-spacing">
+        <div class="card member-card text-center px-4 pb-4">
+          <img src="img/foto_2.jpg" alt="Foto Integrante 2" class="profile-img mx-auto">
           <div class="card-body">
-            <h4 class="fw-bold text-dark mt-2">[Nombres]</h4>
-            <h5 class="text-primary mb-3">[Apellidos]</h5>
-            
-            <ul class="list-unstyled text-secondary text-start small mb-0">
-              <li class="mb-2"><strong>Fecha de Nacimiento:</strong> [Dato]</li>
-              <li class="mb-2"><strong>Skills:</strong> [Dato]</li>
-              <li class="mb-2"><strong>Libros leídos:</strong> [Dato]</li>
-              <li class="mb-2"><strong>Deportes:</strong> [Dato]</li>
-              <li class="mb-2"><strong>Hobbies:</strong> [Dato]</li>
-              <li class="mb-2"><strong>Películas:</strong> [Dato]</li>
-              <li class="mb-2"><strong>Certificaciones:</strong> [Dato]</li>
+            <span class="member-role">Integrante 2</span>
+            <h2 class="member-name">[Nombres]</h2>
+            <h4 class="member-lastname">[Apellidos]</h4>
+            <div class="divider"></div>
+
+            <ul class="info-list">
+              <li><strong>Fecha de Nacimiento:</strong> [Dato]</li>
+              <li><strong>Libros leídos:</strong> [Dato]</li>
+              <li><strong>Skills:</strong> [Dato]</li>
+              <li><strong>Deportes que practica:</strong> [Dato]</li>
+              <li><strong>Hobbies:</strong> [Dato]</li>
+              <li><strong>Películas favoritas:</strong> [Dato]</li>
+              <li><strong>Certificaciones:</strong> [Dato]</li>
             </ul>
           </div>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-4 card-spacing">
-        <div class="card card-shadow border-0 rounded-4 h-100 px-3 pb-3 text-center">
-          <img src="img/foto_3.jpg" alt="Foto Integrante 3" class="profile-img mx-auto shadow-sm">
+      <!-- MATIAS -->
+      <div class="col-md-6 col-lg-6 card-spacing">
+        <div class="card member-card text-center px-4 pb-4">
+          <img src="img/foto_mati.jpg" alt="Foto de Matías Monge" class="profile-img mx-auto">
           <div class="card-body">
-            <h4 class="fw-bold text-dark mt-2">[Nombres]</h4>
-            <h5 class="text-primary mb-3">[Apellidos]</h5>
-            
-            <ul class="list-unstyled text-secondary text-start small mb-0">
-              <li class="mb-2"><strong>Fecha de Nacimiento:</strong> [Dato]</li>
-              <li class="mb-2"><strong>Skills:</strong> [Dato]</li>
-              <li class="mb-2"><strong>Libros leídos:</strong> [Dato]</li>
-              <li class="mb-2"><strong>Deportes:</strong> [Dato]</li>
-              <li class="mb-2"><strong>Hobbies:</strong> [Dato]</li>
-              <li class="mb-2"><strong>Películas:</strong> [Dato]</li>
-              <li class="mb-2"><strong>Certificaciones:</strong> [Dato]</li>
+            <span class="member-role">Integrante 3</span>
+            <h2 class="member-name">Matías Sebastian</h2>
+            <h4 class="member-lastname">Monge Valarezo</h4>
+            <div class="divider"></div>
+
+            <ul class="info-list">
+              <li><strong>Fecha de Nacimiento:</strong> 28/07/2005</li>
+              <li><strong>Libros favoritos:</strong> Hábitos atómicos, El principito, Empieza con el porqué.</li>
+              <li><strong>Skills:</strong> Adaptabilidad, aprendizaje rápido, enfoque centrado, deportista, ágil, rol activo, empatía, resolver problemas.</li>
+              <li><strong>Deportes que practica:</strong> Fútbol, basquetbol.</li>
+              <li><strong>Hobbies:</strong> Jugar fútbol, escuchar música, ir al gimnasio, catador de puestitos de la calle y de bebidas de dudosa procedencia.</li>
+              <li><strong>Películas favoritas:</strong> Django, Isla siniestra, Son como niños.</li>
+              <li><strong>Certificaciones:</strong> JISIC 2025 organizado por la Facultad de Sistemas de la EPN.</li>
             </ul>
           </div>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-4 card-spacing">
-        <div class="card card-shadow border-0 rounded-4 h-100 px-3 pb-3 text-center">
-          <img src="img/foto_4.jpg" alt="Foto Integrante 4" class="profile-img mx-auto shadow-sm">
+      <!-- EMILY -->
+      <div class="col-md-6 col-lg-6 card-spacing">
+        <div class="card member-card text-center px-4 pb-4">
+          <img src="img/foto_paola2.jpg" alt="Foto de Emily Pacheco" class="profile-img mx-auto">
           <div class="card-body">
-            <h4 class="fw-bold text-dark mt-2">[Nombres]</h4>
-            <h5 class="text-primary mb-3">[Apellidos]</h5>
-            
-            <ul class="list-unstyled text-secondary text-start small mb-0">
-              <li class="mb-2"><strong>Fecha de Nacimiento:</strong> [Dato]</li>
-              <li class="mb-2"><strong>Skills:</strong> [Dato]</li>
-              <li class="mb-2"><strong>Libros leídos:</strong> [Dato]</li>
-              <li class="mb-2"><strong>Deportes:</strong> [Dato]</li>
-              <li class="mb-2"><strong>Hobbies:</strong> [Dato]</li>
-              <li class="mb-2"><strong>Películas:</strong> [Dato]</li>
-              <li class="mb-2"><strong>Certificaciones:</strong> [Dato]</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+            <span class="member-role">Integrante 4</span>
+            <h2 class="member-name">Emily Paola</h2>
+            <h4 class="member-lastname">Pacheco Jiménez</h4>
+            <div class="divider"></div>
 
-      <div class="col-md-6 col-lg-4 card-spacing">
-        <div class="card card-shadow border-0 rounded-4 h-100 px-3 pb-3 text-center">
-          <img src="img/foto_5.jpg" alt="Foto Integrante 5" class="profile-img mx-auto shadow-sm">
-          <div class="card-body">
-            <h4 class="fw-bold text-dark mt-2">[Nombres]</h4>
-            <h5 class="text-primary mb-3">[Apellidos]</h5>
-            
-            <ul class="list-unstyled text-secondary text-start small mb-0">
-              <li class="mb-2"><strong>Fecha de Nacimiento:</strong> [Dato]</li>
-              <li class="mb-2"><strong>Skills:</strong> [Dato]</li>
-              <li class="mb-2"><strong>Libros leídos:</strong> [Dato]</li>
-              <li class="mb-2"><strong>Deportes:</strong> [Dato]</li>
-              <li class="mb-2"><strong>Hobbies:</strong> [Dato]</li>
-              <li class="mb-2"><strong>Películas:</strong> [Dato]</li>
-              <li class="mb-2"><strong>Certificaciones:</strong> [Dato]</li>
+            <ul class="info-list">
+              <li><strong>Fecha de Nacimiento:</strong> 6 de Julio 2006</li>
+              <li><strong>Libros leídos:</strong> Perderte para Encontrarte, El Arte de no Amargarte, Hábitos atómicos.</li>
+              <li><strong>Skills:</strong> Trabajo en equipo, responsabilidad, creatividad, organización, adaptabilidad, liderazgo, resolución de problemas, pensamiento crítico, aprendizaje rápido, ágil.</li>
+              <li><strong>Deportes que practica:</strong> Fútbol, Basquetball.</li>
+              <li><strong>Hobbies:</strong> Aprender Alemán, leer libros, escuchar música, ver series, películas, partidos de fútbol, Fórmula 1, jugar fútbol, conocer nuevos lugares.</li>
+              <li><strong>Películas favoritas:</strong> Enredados, Crepúsculo, One Day.</li>
+              <li><strong>Certificaciones:</strong> Aptitud y Peritaje en el Idioma Inglés por PUCESA, Certificado JISIC 2025, Interact2Hack 2026 por la USFQ, Cyberseguridad e Inteligencia Artificial "ANONYMUS".</li>
             </ul>
           </div>
         </div>
@@ -165,7 +332,8 @@
     </div>
   </main>
 
-  <footer class="bg-dark-custom text-center py-4 mt-auto">
+  <!-- FOOTER -->
+  <footer class="text-center py-4 mt-auto">
     <div class="container text-white-50">
       <p class="mb-1 fw-bold text-white">Proyecto de Infraestructura - Tutor Web</p>
       <p class="small mb-0">Implementación de Cableado Estructurado y Servicios de Red</p>
